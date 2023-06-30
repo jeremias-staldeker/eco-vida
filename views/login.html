@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+  <title>EcoVida</title>
+</head>
+
+<body>
+
+  <header class="flex">
+    <div>
+      <a id="nav-home" class="nav-logo" data-role="nav-link">
+        <img class="logo" src="../assets/images/logo.png" alt="EcoVida">
+      </a>
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false" type="button">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="navigation" class="navigation flex" data-visible="false">
+        <li class="user-action">
+          <button>Incribirse</button>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <div class="login-card">
+      <div class="login-grid">
+        <div class="login-form">
+          <h1>¡Bienvenido!</h1>
+          <form>
+            <div class="field">
+              <label for="email">Email<span class="red">*</span></label>
+              <input type="text" name="email" id="email">
+            </div>
+            <div class="field">
+              <label for="password">Constraseña<span class="red">*</span></label>
+              <input type="text" name="password" id="password">
+            </div>
+            <div class="login-help">
+              <a href="#">Ayuda, no puedo iniciar sesión</a>
+            </div>
+            <button>
+              Iniciar Sesión
+            </button>
+          </form>
+        </div>
+        <div class="login-banner">Image</div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
