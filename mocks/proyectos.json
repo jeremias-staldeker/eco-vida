@@ -1,0 +1,272 @@
+[
+    {
+        "id": 1,
+        "titulo": "Programa de reciclaje comunitario",
+        "descripcion": "Promoviendo el reciclaje y la reducción de residuos en la comunidad local.",
+        "contenido": "El programa de reciclaje comunitario de la Fundación EcoVida tiene como objetivo fomentar prácticas de reciclaje y reducción de residuos en la comunidad local. Mediante la instalación de contenedores de reciclaje en áreas estratégicas y la realización de campañas de concientización, buscamos promover la separación adecuada de residuos y el uso responsable de los recursos. El programa también incluye actividades educativas en escuelas y colaboraciones con empresas para implementar prácticas sostenibles.",
+        "fechaInicio": "2023-07-01",
+        "fechaFin": "2023-12-31",
+        "imagen": "assets/proyectos/proyecto1.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "Reforestación del Parque Central",
+        "descripcion": "Restaurando la vegetación y promoviendo la biodiversidad en el Parque Central.",
+        "contenido": "El proyecto de reforestación del Parque Central tiene como objetivo restaurar la vegetación nativa y promover la biodiversidad en este importante espacio verde de la ciudad. En colaboración con el gobierno local y otras organizaciones ambientales, la Fundación EcoVida trabajará en la plantación de árboles y plantas autóctonas, así como en la creación de áreas de hábitat para especies locales. También se llevarán a cabo actividades de educación ambiental y se invitará a la comunidad a participar en jornadas de plantación y cuidado del parque.",
+        "fechaInicio": "2023-08-15",
+        "fechaFin": "2024-03-31",
+        "imagen": "assets/proyectos/proyecto2.jpg"
+    },
+    {
+        "id": 3,
+        "titulo": "Campaña de limpieza de playas",
+        "descripcion": "Limpiando las playas y concientizando sobre la contaminación marina.",
+        "contenido": "La campaña de limpieza de playas tiene como objetivo principal eliminar los residuos y desechos que contaminan nuestras costas. A través de jornadas de limpieza comunitarias y acciones de sensibilización, la Fundación EcoVida busca educar a la población sobre el impacto negativo de la contaminación marina y promover prácticas responsables. Además, se realizarán estudios de muestreo para recopilar datos sobre la calidad del agua y la presencia de microplásticos en nuestras playas.",
+        "fechaInicio": "2023-09-10",
+        "fechaFin": "2023-09-15",
+        "imagen": "assets/proyectos/proyecto3.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Creación de huertas urbanas",
+        "descripcion": "Fomentando la agricultura urbana y la seguridad alimentaria.",
+        "contenido": "El proyecto de creación de huertas urbanas tiene como objetivo promover la agricultura urbana y la seguridad alimentaria en la comunidad. A través de la implementación de huertas comunitarias en espacios públicos, la Fundación EcoVida busca fomentar el cultivo de alimentos saludables y sostenibles. Se brindará asesoramiento técnico a los participantes y se organizarán talleres de capacitación sobre técnicas de cultivo y manejo de huertas. Además, se impulsará la creación de mercados locales para la comercialización de los productos cultivados.",
+        "fechaInicio": "2023-10-01",
+        "fechaFin": "2024-05-31",
+        "imagen": "assets/proyectos/proyecto4.jpg"
+    },
+    {
+        "id": 5,
+        "titulo": "Restauración de humedales",
+        "descripcion": "Recuperando los humedales y su importancia ecológica.",
+        "contenido": "El proyecto de restauración de humedales tiene como objetivo recuperar y preservar estos ecosistemas naturales tan valiosos. La Fundación EcoVida trabajará en la eliminación de especies invasoras, la reforestación de áreas degradadas y la mejora de la calidad del agua en los humedales. Además, se realizarán estudios de fauna y flora para comprender mejor su importancia ecológica y se llevarán a cabo actividades educativas para promover la conservación de estos espacios.",
+        "fechaInicio": "2023-11-15",
+        "fechaFin": "2024-08-31",
+        "imagen": "assets/proyectos/proyecto5.jpg"
+    },
+    {
+        "id": 6,
+        "titulo": "Protección de especies en peligro",
+        "descripcion": "Preservando la vida silvestre y sus hábitats.",
+        "contenido": "El proyecto de protección de especies en peligro tiene como objetivo conservar la vida silvestre y sus hábitats amenazados. A través de acciones de monitoreo, protección y conservación de especies en riesgo, la Fundación EcoVida busca prevenir su extinción y promover la biodiversidad. Se implementarán programas de educación ambiental y se trabajarán en colaboración con las comunidades locales para promover la coexistencia responsable entre humanos y la fauna silvestre.",
+        "fechaInicio": "2024-01-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto6.jpg"
+    },
+    {
+        "id": 7,
+        "titulo": "Campaña de concientización sobre el cambio climático",
+        "descripcion": "Informando y sensibilizando sobre los efectos del cambio climático.",
+        "contenido": "La campaña de concientización sobre el cambio climático tiene como objetivo informar a la población sobre los efectos del cambio climático y promover acciones individuales y colectivas para mitigar sus impactos. A través de charlas, talleres y actividades de divulgación, la Fundación EcoVida busca aumentar la conciencia sobre la importancia de adoptar medidas sostenibles en nuestra vida diaria y presionar a los gobiernos para que tomen acciones más efectivas en la lucha contra el cambio climático.",
+        "fechaInicio": "2024-02-15",
+        "fechaFin": "2024-02-28",
+        "imagen": "assets/proyectos/proyecto7.jpg"
+    },
+    {
+        "id": 8,
+        "titulo": "Programa de energías renovables en escuelas",
+        "descripcion": "Promoviendo el uso de energías limpias en el ámbito educativo.",
+        "contenido": "El programa de energías renovables en escuelas tiene como objetivo fomentar el uso de energías limpias y renovables en el ámbito educativo. A través de la instalación de paneles solares y sistemas de captación de agua de lluvia, se busca reducir la dependencia de fuentes de energía no renovables y enseñar a los estudiantes sobre la importancia de la sostenibilidad. Además, se realizarán talleres y actividades prácticas para promover la educación ambiental y el desarrollo de habilidades en el campo de las energías renovables.",
+        "fechaInicio": "2024-03-10",
+        "fechaFin": "2024-06-30",
+        "imagen": "assets/proyectos/proyecto8.jpg"
+    },
+    {
+        "id": 9,
+        "titulo": "Investigación sobre la contaminación del aire",
+        "descripcion": "Estudiando los efectos de la contaminación del aire en la salud humana.",
+        "contenido": "El proyecto de investigación sobre la contaminación del aire tiene como objetivo estudiar los efectos de la contaminación atmosférica en la salud humana y buscar soluciones para reducir su impacto. La Fundación EcoVida realizará mediciones de calidad del aire en diferentes zonas urbanas y evaluará los niveles de contaminantes y su relación con enfermedades respiratorias. Los resultados obtenidos servirán para promover políticas y acciones que mejoren la calidad del aire y protejan la salud de la población.",
+        "fechaInicio": "2024-04-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto9.jpg"
+    },
+    {
+        "id": 10,
+        "titulo": "Educación ambiental en escuelas",
+        "descripcion": "Promoviendo la conciencia ambiental desde temprana edad.",
+        "contenido": "El proyecto de educación ambiental en escuelas tiene como objetivo promover la conciencia ambiental desde temprana edad y fomentar prácticas sostenibles entre los estudiantes. Se llevarán a cabo charlas, talleres y actividades interactivas en escuelas de diferentes niveles, abordando temas como la conservación de la biodiversidad, el reciclaje, el consumo responsable y el cuidado del agua. La Fundación EcoVida busca formar a los futuros líderes ambientales y generar un cambio positivo en la sociedad a través de la educación.",
+        "fechaInicio": "2024-05-15",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto10.jpg"
+    },
+    {
+        "id": 11,
+        "titulo": "Protección de áreas naturales",
+        "descripcion": "Preservando los ecosistemas y la diversidad biológica en áreas naturales protegidas.",
+        "contenido": "El proyecto de protección de áreas naturales tiene como objetivo preservar los ecosistemas y la diversidad biológica en áreas naturales protegidas. La Fundación EcoVida trabajará en colaboración con organismos gubernamentales y otras organizaciones para fortalecer la gestión de estas áreas, implementando estrategias de conservación y monitoreo. También se llevarán a cabo actividades de educación ambiental y se promoverá el turismo sostenible como una alternativa económica para las comunidades locales.",
+        "fechaInicio": "2024-06-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto11.jpg"
+    },
+    {
+        "id": 12,
+        "titulo": "Programa de uso eficiente del agua",
+        "descripcion": "Promoviendo el uso responsable y eficiente del agua.",
+        "contenido": "El programa de uso eficiente del agua tiene como objetivo promover el uso responsable y eficiente de este recurso vital. A través de la capacitación y sensibilización, la Fundación EcoVida busca concientizar a la comunidad sobre la importancia de ahorrar agua y adoptar prácticas sostenibles en el hogar, la industria y la agricultura. Se brindarán herramientas y consejos para la gestión adecuada del agua y se promoverán tecnologías y sistemas de riego eficientes.",
+        "fechaInicio": "2024-07-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto12.jpg"
+    },
+    {
+        "id": 13,
+        "titulo": "Rescate y rehabilitación de fauna silvestre",
+        "descripcion": "Ayudando a animales en situación de vulnerabilidad y reintegrándolos a su hábitat natural.",
+        "contenido": "El proyecto de rescate y rehabilitación de fauna silvestre tiene como objetivo brindar ayuda y atención a animales en situación de vulnerabilidad, como huérfanos, heridos o víctimas de tráfico ilegal. A través de centros de rescate y rehabilitación, la Fundación EcoVida trabajará en la atención veterinaria, la recuperación y la preparación para su liberación en su hábitat natural. Además, se promoverá la educación y la conciencia sobre la protección de la fauna silvestre y se buscará la participación de la comunidad en la conservación de estos animales.",
+        "fechaInicio": "2024-08-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto13.jpg"
+    },
+    {
+        "id": 14,
+        "titulo": "Instalación de sistemas de energía renovable en comunidades rurales",
+        "descripcion": "Llevando energía limpia y accesible a comunidades rurales sin acceso a la red eléctrica.",
+        "contenido": "El proyecto de instalación de sistemas de energía renovable en comunidades rurales tiene como objetivo llevar energía limpia y accesible a zonas remotas que carecen de acceso a la red eléctrica. A través de la instalación de paneles solares y sistemas de energía renovable, la Fundación EcoVida busca mejorar la calidad de vida de estas comunidades y promover el desarrollo sostenible. Se brindará capacitación en el mantenimiento y la gestión de estos sistemas, y se fomentará el uso responsable de la energía.",
+        "fechaInicio": "2024-09-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto14.jpg"
+    },
+    {
+        "id": 15,
+        "titulo": "Proyecto de monitoreo de especies migratorias",
+        "descripcion": "Estudiando y protegiendo a las especies migratorias en su paso por nuestra región.",
+        "contenido": "El proyecto de monitoreo de especies migratorias tiene como objetivo estudiar y proteger a las especies que realizan largas migraciones y pasan por nuestra región. A través de la identificación, el seguimiento y el estudio de estas especies, la Fundación EcoVida busca comprender sus rutas migratorias, identificar amenazas y promover acciones de conservación. También se realizarán actividades educativas y se invitará a la comunidad a participar en el avistamiento de aves migratorias y otras especies.",
+        "fechaInicio": "2024-10-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto15.jpg"
+    },
+    {
+        "id": 16,
+        "titulo": "Programa de educación ambiental en comunidades indígenas",
+        "descripcion": "Fortaleciendo el conocimiento y la relación de las comunidades indígenas con su entorno natural.",
+        "contenido": "El programa de educación ambiental en comunidades indígenas tiene como objetivo fortalecer el conocimiento tradicional y la relación de estas comunidades con su entorno natural. A través de la valorización de la cosmovisión indígena y la promoción de prácticas sostenibles, la Fundación EcoVida busca contribuir a la conservación de la diversidad cultural y la biodiversidad. Se realizarán talleres, intercambios de conocimientos y actividades de recuperación y manejo sostenible de recursos naturales.",
+        "fechaInicio": "2024-11-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto16.jpg"
+    },
+    {
+        "id": 17,
+        "titulo": "Campaña de sensibilización sobre la deforestación",
+        "descripcion": "Informando y concientizando sobre los efectos de la deforestación en nuestro ecosistema.",
+        "contenido": "La campaña de sensibilización sobre la deforestación tiene como objetivo informar y concientizar a la población sobre los efectos negativos de la deforestación en nuestro ecosistema. A través de la difusión de información, la realización de charlas y la participación en eventos comunitarios, la Fundación EcoVida busca generar conciencia sobre la importancia de los bosques, promover la reforestación y presionar por políticas y acciones que frenen la deforestación.",
+        "fechaInicio": "2024-12-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto17.jpg"
+    },
+    {
+        "id": 18,
+        "titulo": "Programa de conservación marina",
+        "descripcion": "Protegiendo y preservando los ecosistemas marinos y costeros.",
+        "contenido": "El programa de conservación marina tiene como objetivo proteger y preservar los ecosistemas marinos y costeros de nuestra región. A través de la creación de áreas marinas protegidas, la restauración de arrecifes de coral y la promoción de buenas prácticas de pesca, la Fundación EcoVida busca garantizar la salud y la biodiversidad de nuestros océanos. También se realizarán campañas de limpieza de playas y actividades de educación ambiental para promover la conservación marina.",
+        "fechaInicio": "2024-01-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto18.jpg"
+    },
+    {
+        "id": 19,
+        "titulo": "Proyecto de investigación sobre la contaminación de ríos",
+        "descripcion": "Estudiando y combatiendo la contaminación de los ríos en nuestra región.",
+        "contenido": "El proyecto de investigación sobre la contaminación de ríos tiene como objetivo estudiar y combatir la contaminación de los ríos en nuestra región. A través de muestreos, análisis de agua y evaluación de impacto ambiental, la Fundación EcoVida buscará identificar las fuentes de contaminación y proponer soluciones para su mitigación. Se promoverán acciones de sensibilización y participación ciudadana para preservar la calidad del agua y proteger los ecosistemas fluviales.",
+        "fechaInicio": "2024-02-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto19.jpg"
+    },
+    {
+        "id": 20,
+        "titulo": "Programa de gestión de residuos sólidos",
+        "descripcion": "Promoviendo la reducción, reciclaje y disposición adecuada de los residuos sólidos.",
+        "contenido": "El programa de gestión de residuos sólidos tiene como objetivo promover la reducción, el reciclaje y la disposición adecuada de los residuos sólidos en nuestra región. A través de campañas de sensibilización, la implementación de sistemas de separación de residuos y la promoción de emprendimientos sostenibles, la Fundación EcoVida busca reducir el impacto ambiental de los residuos y promover una gestión más responsable. También se trabajará en la creación de puntos de reciclaje y la capacitación de la comunidad en buenas prácticas de manejo de residuos.",
+        "fechaInicio": "2024-03-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto20.jpg"
+    },
+    {
+        "id": 21,
+        "titulo": "Restauración de ecosistemas degradados",
+        "descripcion": "Recuperando la salud y la biodiversidad de ecosistemas degradados.",
+        "contenido": "El proyecto de restauración de ecosistemas degradados tiene como objetivo recuperar la salud y la biodiversidad de áreas naturales afectadas por actividades humanas. A través de la reforestación, la reintroducción de especies nativas y la implementación de prácticas de manejo sostenible del suelo, la Fundación EcoVida busca restaurar la funcionalidad de los ecosistemas y promover la recuperación de especies en peligro de extinción. Se realizarán jornadas de voluntariado y se establecerán alianzas con otras organizaciones y comunidades locales.",
+        "fechaInicio": "2024-04-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto21.jpg"
+    },
+    {
+        "id": 22,
+        "titulo": "Programa de agroecología",
+        "descripcion": "Promoviendo prácticas agrícolas sostenibles y respetuosas con el medio ambiente.",
+        "contenido": "El programa de agroecología tiene como objetivo promover prácticas agrícolas sostenibles y respetuosas con el medio ambiente. A través de capacitaciones, asesorías técnicas y la creación de huertos agroecológicos demostrativos, la Fundación EcoVida busca fomentar la producción de alimentos saludables, la conservación de la biodiversidad agrícola y la reducción del uso de agroquímicos. También se realizarán actividades de educación alimentaria y se trabajará en la creación de redes de productores agroecológicos.",
+        "fechaInicio": "2024-05-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto22.jpg"
+    },
+    {
+        "id": 23,
+        "titulo": "Investigación de especies endémicas en peligro",
+        "descripcion": "Estudiando y protegiendo a las especies endémicas en riesgo de desaparecer.",
+        "contenido": "El proyecto de investigación de especies endémicas en peligro tiene como objetivo estudiar y proteger a las especies únicas de nuestra región que se encuentran en riesgo de desaparecer. A través de monitoreos, análisis genéticos y la implementación de medidas de conservación, la Fundación EcoVida busca garantizar la supervivencia de estas especies y su hábitat. Se trabajará en estrecha colaboración con instituciones científicas y se buscará involucrar a la comunidad en la protección de estas especies emblemáticas.",
+        "fechaInicio": "2024-06-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto23.jpg"
+    },
+    {
+        "id": 24,
+        "titulo": "Programa de monitoreo de calidad del aire",
+        "descripcion": "Evaluar y mejorar la calidad del aire en nuestra región.",
+        "contenido": "El programa de monitoreo de calidad del aire tiene como objetivo evaluar y mejorar la calidad del aire en nuestra región. A través de la instalación de estaciones de monitoreo y el análisis de datos, la Fundación EcoVida buscará identificar los contaminantes atmosféricos y sus fuentes, así como proponer medidas de mitigación. Se promoverá la educación ambiental sobre la importancia de respirar un aire limpio y se buscará concientizar sobre los efectos de la contaminación atmosférica en la salud.",
+        "fechaInicio": "2024-07-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto24.jpg"
+    },
+    {
+        "id": 25,
+        "titulo": "Proyecto de conservación de humedales",
+        "descripcion": "Preservando y restaurando los humedales para proteger la biodiversidad.",
+        "contenido": "El proyecto de conservación de humedales tiene como objetivo preservar y restaurar los humedales de nuestra región para proteger la biodiversidad y los servicios ecosistémicos que brindan. A través de acciones de limpieza, reforestación de áreas cercanas y la promoción de buenas prácticas agrícolas en zonas aledañas, la Fundación EcoVida busca conservar estos ecosistemas clave y garantizar su funcionalidad. También se trabajará en la educación ambiental sobre la importancia de los humedales y se fomentará la participación ciudadana en su protección.",
+        "fechaInicio": "2024-08-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto25.jpg"
+    },
+    {
+        "id": 26,
+        "titulo": "Programa de educación ambiental en escuelas",
+        "descripcion": "Fomentando la conciencia ambiental desde edades tempranas.",
+        "contenido": "El programa de educación ambiental en escuelas tiene como objetivo fomentar la conciencia ambiental desde edades tempranas. A través de actividades lúdicas, charlas educativas y la implementación de huertos escolares, la Fundación EcoVida busca promover el cuidado del medio ambiente, la importancia de la biodiversidad y la adopción de prácticas sostenibles. Se trabajará en alianza con instituciones educativas y se buscará involucrar a docentes, estudiantes y familias en la educación ambiental.",
+        "fechaInicio": "2024-09-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto26.jpg"
+    },
+    {
+        "id": 27,
+        "titulo": "Proyecto de protección de especies migratorias",
+        "descripcion": "Contribuyendo a la protección de especies migratorias y sus rutas de migración.",
+        "contenido": "El proyecto de protección de especies migratorias tiene como objetivo contribuir a la protección de las especies migratorias y sus rutas de migración en nuestra región. A través de la identificación de áreas clave y la implementación de medidas de conservación, la Fundación EcoVida buscará garantizar la supervivencia y el bienestar de estas especies durante sus desplazamientos. Se trabajará en colaboración con organizaciones internacionales y se promoverá la sensibilización sobre la importancia de la conservación de las rutas migratorias.",
+        "fechaInicio": "2024-10-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto27.jpg"
+    },
+    {
+        "id": 28,
+        "titulo": "Programa de reciclaje y gestión de residuos",
+        "descripcion": "Promoviendo la reducción, reutilización y reciclaje de residuos.",
+        "contenido": "El programa de reciclaje y gestión de residuos tiene como objetivo promover la reducción, reutilización y reciclaje de residuos en nuestra comunidad. A través de campañas de sensibilización, la implementación de puntos de reciclaje y la promoción de buenas prácticas en el manejo de residuos, la Fundación EcoVida busca reducir la cantidad de residuos enviados a vertederos y fomentar una cultura del reciclaje. Se establecerán alianzas con empresas y se buscará involucrar a la ciudadanía en la gestión adecuada de los residuos.",
+        "fechaInicio": "2024-11-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto28.jpg"
+    },
+    {
+        "id": 29,
+        "titulo": "Proyecto de energías renovables comunitarias",
+        "descripcion": "Fomentando el uso de energías renovables a nivel comunitario.",
+        "contenido": "El proyecto de energías renovables comunitarias tiene como objetivo fomentar el uso de energías renovables a nivel comunitario. A través de la instalación de sistemas solares y eólicos en espacios públicos y comunidades rurales, la Fundación EcoVida busca promover la generación de energía limpia y la reducción de emisiones de gases de efecto invernadero. Se capacitará a los miembros de las comunidades en el mantenimiento de los sistemas y se trabajará en la sensibilización sobre los beneficios de las energías renovables.",
+        "fechaInicio": "2024-12-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto29.jpg"
+    },
+    {
+        "id": 30,
+        "titulo": "Programa de restauración de ecosistemas marinos",
+        "descripcion": "Recuperando la salud de los ecosistemas marinos y protegiendo la vida marina.",
+        "contenido": "El programa de restauración de ecosistemas marinos tiene como objetivo recuperar la salud de los ecosistemas marinos y proteger la vida marina en nuestra región. A través de la implementación de estrategias de restauración, la protección de áreas marinas clave y la promoción de prácticas pesqueras sostenibles, la Fundación EcoVida busca conservar la biodiversidad marina y garantizar la sostenibilidad de los recursos pesqueros. Se realizarán acciones de limpieza de playas y se fomentará la educación ambiental sobre la importancia de los ecosistemas marinos.",
+        "fechaInicio": "2024-01-01",
+        "fechaFin": "2024-12-31",
+        "imagen": "assets/proyectos/proyecto30.jpg"
+    }
+]
