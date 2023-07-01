@@ -24,19 +24,33 @@ const generateCardElement = (template, data) => {
     cardHTML = replaceAll(cardHTML, placeholder, value);
   }
 
-  // Crear un elemento contenedor temporal para la tarjeta
   const templateElem = document.createElement('div');
   templateElem.innerHTML = cardHTML;
 
+  const userDiv = templateElem.querySelector('.user');
+  if (userDiv) {
+    userDiv.parentElement.removeChild(userDiv);
+  }
+
+  const inscriptionButton = document.createElement('div');
+  inscriptionButton.innerHTML = '<button class="inscription-button">Inscribirse</button>';
+
+  const cardFooter = templateElem.querySelector('.card-footer');
+  if (cardFooter) {
+    cardFooter.classList.add('centered');
+    cardFooter.appendChild(inscriptionButton);
+  }
+
   return templateElem;
 };
+
 
 /**
  * Carga la plantilla de tarjeta y genera las tarjetas con los datos proporcionados.
  * Reemplaza todas las tarjetas existentes en el contenedor de tarjetas.
  * @param {Array} [projects=[]] - Lista de proyectos para generar las tarjetas.
  */
- const loadCardTemplate = async (projects = []) => {
+const loadCardTemplate = async (projects = []) => {
   // Cargar el contenido del archivo card-template.html
   const response = await fetch('../templates/card-template.html');
   const templateHtml = await response.text();
