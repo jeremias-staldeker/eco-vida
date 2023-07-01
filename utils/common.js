@@ -77,17 +77,17 @@ export const capitalizeFirstLetter = (str) => {
 export const formatDate = (date) => {
   try {
     const options = { weekday: 'long', day: 'numeric', month: 'long' };
-  const formattedDate = date.toLocaleDateString('es-ES', options);
+    const formattedDate = date.toLocaleDateString('es-ES', options);
 
-  const words = formattedDate.split(' ');
-  const capitalizedWords = words.map((word, index) => {
-    if (index === 0 || index === words.length - 1) {
-      return capitalizeFirstLetter(word);
-    }
-    return word;
-  });
+    const words = formattedDate.split(' ');
+    const capitalizedWords = words.map((word, index) => {
+      if (index === 0 || index === words.length - 1) {
+        return capitalizeFirstLetter(word);
+      }
+      return word;
+    });
 
-  return capitalizedWords.join(' ');
+    return capitalizedWords.join(' ');
   } catch (error) {
     return null;
   }
@@ -105,3 +105,46 @@ export const replaceAll = (str, search, replacement) => {
   //anteriores a ES2021, que no incluían dicho método. 
   return str.split(search).join(replacement);
 };
+
+/**
+ * Verifica si una cadena de texto incluye de forma insensible a mayúsculas o minúsculas
+ * una subcadena dada.
+ * @param {string} str - Cadena de texto en la que se realizará la búsqueda.
+ * @param {string} substring - Subcadena que se buscará en la cadena de texto.
+ * @returns {boolean} - Devuelve true si la cadena de texto incluye la subcadena de forma insensible,
+ *                      de lo contrario devuelve false.
+ */
+export const includesIgnoreCase = (str, substring) => {
+  return str.toString().toLowerCase().includes(substring.toLowerCase());
+};
+
+/**
+ * Filtra un array de objetos en base a un valor de filtro y campos de búsqueda específicos.
+ * Si no se especifican campos de búsqueda, se realizará la búsqueda en todos los atributos del objeto.
+ * @param {Array} objects - Array de objetos que se filtrarán.
+ * @param {string} filterValue - Valor de filtro utilizado para realizar la búsqueda.
+ * @param {Array} [searchableFields] - Campos de los objetos en los que se realizará la búsqueda. Si no se especifica, se realizará la búsqueda en todos los atributos del objeto.
+ * @returns {Array} - Array filtrado de objetos que coinciden con el valor de filtro.
+ */
+ export const filterObjects = (objects, filterValue, searchableFields) => {
+  if (filterValue.length > 0) {
+    return objects.filter((obj) => {
+      if (!searchableFields) {
+        // Búsqueda en todos los atributos del objeto
+        return Object.values(obj).some((value) =>
+          includesIgnoreCase(value, filterValue)
+        );
+      } else {
+        // Búsqueda en los campos de búsqueda específicos
+        return searchableFields.some((field) =>
+          includesIgnoreCase(obj[field], filterValue)
+        );
+      }
+    });
+  } else {
+    return objects;
+  }
+};
+
+
+
