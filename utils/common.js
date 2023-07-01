@@ -70,7 +70,7 @@ export const updateObject = (key, objectId, updatedObject) => {
 
 
 /**
- * Convierte una fecha en un string con el formato "Día de la semana, Día de mes de Mes".
+ * Convierte una fecha en un string con el formato "NombreDia, Dia de NombreMes".
  * @param {Date} date - La fecha a convertir.
  * @returns {string} El string con el formato deseado.
  */
