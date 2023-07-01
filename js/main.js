@@ -2,6 +2,12 @@ const mainContent = document.querySelector("main");
 const navLink = document.querySelectorAll('[data-role="nav-link"]');
 const navigation = document.querySelector('.navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
+const navAdmin = document.getElementById("nav-admin");
+
+const userActionContainer = document.getElementById("user-action");
+const loginAction = document.getElementById("login");
+const logoutAction = document.getElementById("logout");
+const signUpAction = document.getElementById("sign-up");
 
 navLink.forEach(n => {
   n.addEventListener("click", () => {
@@ -10,6 +16,12 @@ navLink.forEach(n => {
     closeMobileMenu();
   });
 });
+
+if (logoutAction) {
+  logoutAction.addEventListener('click', () => {
+    localStorage.removeItem('logged-user');
+  });
+}
 
 navToggle.addEventListener('click', () => {
   const visibility = navigation.getAttribute('data-visible');
@@ -96,4 +108,24 @@ function closeMobileMenu() {
   }
 }
 
-// chargeContent("nav-home");
+function checkLoggedUser() {
+  const user = JSON.parse(localStorage.getItem('logged-user'));
+  if (user) {
+    if (user?.role?.name === 'admin') {
+      navAdmin?.setAttribute('data-visible', true);
+    } else {
+      navAdmin?.setAttribute('data-visible', false);
+    }
+    if (loginAction) loginAction.classList.add('invisible');
+    if (signUpAction) signUpAction.classList.add('invisible');
+    if (logoutAction) logoutAction.classList.remove('invisible');
+    if (userActionContainer) userActionContainer.classList.add('user-action-simple');
+  } else {
+    if (loginAction) loginAction.classList.remove('invisible');
+    if (signUpAction) signUpAction.classList.remove('invisible');
+    if (userActionContainer) userActionContainer.classList.remove('user-action-simple');
+    if (logoutAction) logoutAction.classList.add('invisible');
+  }
+}
+
+checkLoggedUser();

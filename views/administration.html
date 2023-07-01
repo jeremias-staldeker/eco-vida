@@ -38,7 +38,11 @@
           <a id="nav-contact" data-role="nav-link" data-status="" href="./contact.html">Contacto</a>
         </li>
         <li>
-          <a id="nav-admin" data-role="nav-link" data-status="active" href="./administration.html">Administración</a>
+          <a id="nav-admin" data-role="nav-link" data-status="active" data-visible="true"
+            href="./administration.html">Administración</a>
+        </li>
+        <li id="user-action" class="user-action">
+          <a id="logout" class="invisible" href="./login.html">Cerrar Sesión</a>
         </li>
       </ul>
     </nav>
@@ -50,11 +54,14 @@
 
     <div class="tabs-container">
       <div class="tabs">
-
         <input type="radio" name="tabs" id="tabone" checked="checked">
         <label for="tabone">Usuarios</label>
         <div class="tab">
           <div class="tab-content">
+            <div class="table-search">
+              <input type="search" placeholder="Buscar" id="user-search" name="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
             <div class="table-responsive">
               <table class="table table-hover table-dark table-striped table-bordered">
                 <thead>
@@ -67,34 +74,20 @@
                     <th scope="col">Rol</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">---</th>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">---</th>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                  </tr>
+                <tbody id="users-tbody">
                 </tbody>
               </table>
             </div>
           </div>
-
         </div>
-
         <input type="radio" name="tabs" id="tabtwo">
         <label for="tabtwo">Proyectos</label>
         <div class="tab">
           <div class="tab-content">
+            <div class="table-search">
+              <input type="search" placeholder="Buscar" id="project-search" name="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
             <div class="table-responsive">
               <table class="table table-hover table-dark table-striped table-bordered">
                 <thead>
@@ -106,22 +99,7 @@
                     <th scope="col">Fecha Fin</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">---</th>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">---</th>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                  </tr>
-                </tbody>
+                <tbody id="projects-tbody"></tbody>
               </table>
             </div>
           </div>
@@ -131,6 +109,10 @@
         <label for="tabthree">Noticias</label>
         <div class="tab">
           <div class="tab-content">
+            <div class="table-search">
+              <input type="search" placeholder="Buscar" id="news-search" name="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
             <div class="table-responsive">
               <table class="table table-hover table-dark table-striped table-bordered">
                 <thead>
@@ -142,21 +124,7 @@
                     <th scope="col">Autor</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">---</th>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">---</th>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                  </tr>
+                <tbody id="news-tbody"></tr>
                 </tbody>
               </table>
             </div>
@@ -168,6 +136,7 @@
 
   </main>
 
+  <script src="../js/admin.js" defer type="module"></script>
   <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
 </body>
 

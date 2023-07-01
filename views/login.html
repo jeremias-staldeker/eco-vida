@@ -39,18 +39,21 @@
         <div class="login-form">
           <h1>¡Bienvenido!</h1>
           <form>
+            <span id="user-error" class="red invisible"></span>
             <div class="field">
               <label for="email">Email<span class="red">*</span></label>
               <input type="text" name="email" id="email">
+              <span id="email-error" class="red invisible"></span>
             </div>
             <div class="field">
               <label for="password">Constraseña<span class="red">*</span></label>
               <input type="password" name="password" id="password">
+              <span id="password-error" class="red invisible"></span>
             </div>
             <div class="login-help">
               <a href="#">Ayuda, no puedo iniciar sesión</a>
             </div>
-            <button type="button">
+            <button type="button" id="login">
               Iniciar Sesión
             </button>
           </form>
@@ -63,6 +66,7 @@
 
   </main>
 
+  <script src="../js/login.js"></script>
   <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
 </body>
 
