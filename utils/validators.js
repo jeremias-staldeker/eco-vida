@@ -3,7 +3,7 @@
  * @param {any} value - Valor a verificar.
  * @returns {boolean} - True si es un número válido, false en caso contrario.
  */
-const isValidNumber = (value) => {
+export const isValidNumber = (value) => {
     try {
         const number = Number(value);
         return !isNaN(number);
@@ -17,7 +17,7 @@ const isValidNumber = (value) => {
  * @param {string} value - Valor a verificar.
  * @returns {boolean} - True si es un email válido, false en caso contrario.
  */
-const isValidEmail = (value) => {
+export const isValidEmail = (value) => {
     try {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(value);
@@ -31,7 +31,7 @@ const isValidEmail = (value) => {
  * @param {string} value - Valor a verificar.
  * @returns {boolean} - True si es un string vacío, false en caso contrario.
  */
-const isEmptyString = (value) => {
+export const isEmptyString = (value) => {
     try {
         return value.trim() === '';
     } catch (error) {
@@ -44,7 +44,7 @@ const isEmptyString = (value) => {
  * @param {object} value - Valor a verificar.
  * @returns {boolean} - True si es un objeto vacío, false en caso contrario.
  */
-const isEmptyObject = (value) => {
+export const isEmptyObject = (value) => {
     try {
         return Object.keys(value).length === 0;
     } catch (error) {
@@ -57,7 +57,7 @@ const isEmptyObject = (value) => {
  * @param {string} value - Valor a verificar.
  * @returns {boolean} - True si es un número de teléfono válido, false en caso contrario.
  */
-const isValidPhone = (value) => {
+export const isValidPhone = (value) => {
     try {
         const phoneRegex = /^[0-9]{10}$/;
         return phoneRegex.test(value);
@@ -71,7 +71,7 @@ const isValidPhone = (value) => {
 * @param {string} value - Valor a verificar.
 * @returns {boolean} - True si es una fecha válida, false en caso contrario.
 */
-const isValidDate = (value) => {
+export const isValidDate = (value) => {
     try {
         const date = new Date(value);
         return !isNaN(date);
@@ -86,7 +86,7 @@ const isValidDate = (value) => {
 * @param {number} minLength - Longitud mínima requerida.
 * @returns {boolean} - True si cumple con la longitud mínima, false en caso contrario.
 */
-const hasMinLength = (value, minLength) => {
+export const hasMinLength = (value, minLength) => {
     try {
         return value.length >= minLength;
     } catch (error) {
@@ -100,23 +100,10 @@ const hasMinLength = (value, minLength) => {
  * @param {number} maxLength - Longitud máxima permitida.
  * @returns {boolean} - True si cumple con la longitud máxima, false en caso contrario.
  */
-const hasMaxLength = (value, maxLength) => {
+export const hasMaxLength = (value, maxLength) => {
     try {
         return value.length <= maxLength;
     } catch (error) {
         return false;
     }
-};
-
-
-
-module.exports = {
-    isValidNumber,
-    isValidEmail,
-    isEmptyString,
-    isEmptyObject,
-    isValidPhone,
-    isValidDate,
-    hasMinLength,
-    hasMaxLength
 };
