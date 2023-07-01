@@ -1,6 +1,10 @@
 import { news } from '../mocks/news-data.js'
-import { replaceAll, formatDate } from '../utils/common.js'
+import { replaceAll, formatDate, filterObjects } from '../utils/common.js'
 import { isValidDate } from '../utils/validators.js'
+
+const newsSearch = document.getElementById('news-search');
+const cardContainer = document.getElementById('news-container')
+
 /**
  * Genera un elemento de tarjeta HTML a partir de una plantilla y datos proporcionados.
  * @param {string} template - La plantilla de la tarjeta en formato HTML.
@@ -29,14 +33,16 @@ const generateCardElement = (template, data) => {
 
 /**
  * Carga la plantilla de tarjeta y genera las tarjetas con los datos proporcionados.
- * Inserta las tarjetas generadas en el contenedor de tarjetas.
+ * Reemplaza todas las tarjetas existentes en el contenedor de tarjetas.
+ * @param {Array} [news=[]] - Lista de noticias para generar las tarjetas.
  */
-const loadCardTemplate = async () => {
+ const loadCardTemplate = async (news = []) => {
   // Cargar el contenido del archivo card-template.html
   const response = await fetch('../templates/card-template.html');
   const templateHtml = await response.text();
-  
-  const cardContainer = document.getElementById('news-container');
+
+  // Eliminar los hijos existentes del contenedor de tarjetas
+  cardContainer.innerHTML = '';
 
   // Generar y agregar las tarjetas para cada dato en la lista de noticias
   news.forEach((cardData) => {
@@ -46,4 +52,11 @@ const loadCardTemplate = async () => {
 };
 
 // Cargar la plantilla y generar las tarjetas
-loadCardTemplate();
+loadCardTemplate(news);
+
+newsSearch.addEventListener('keyup', (e) => {
+  const criteria = e.target.value;
+  const filteredNews = filterObjects(news, criteria, ['id', 'title', 'description', 'author']);
+  loadCardTemplate(filteredNews);
+});
+
