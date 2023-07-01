@@ -50,19 +50,19 @@ const updateObject = (filePath, objectId, updatedObject) => {
  * @param {string} filePath - Ruta del archivo JSON.
  * @param {number|string} objectId - ID del objeto a eliminar.
  */
- const deleteObject = (filePath, objectId) => {
-    const data = readJSONFile(filePath);
-    const index = data.findIndex(obj => obj.id === objectId);
-    if (index !== -1) {
-      data.splice(index, 1);
-      saveJSONFile(filePath, data);
-    }
+const deleteObject = (filePath, objectId) => {
+  const data = readJSONFile(filePath);
+  const index = data.findIndex(obj => obj.id === objectId);
+  if (index !== -1) {
+    data.splice(index, 1);
+    saveJSONFile(filePath, data);
+  }
 }
 
 module.exports = {
-    readJSONFile,
-    saveJSONFile,
-    insertObject,
-    updateObject,
-    deleteObject
-  }
+  readJSONFile,
+  saveJSONFile,
+  insertObject,
+  updateObject,
+  deleteObject
+}
