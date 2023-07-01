@@ -44,18 +44,20 @@
         <li id="user-action" class="user-action">
           <a id="login" href="./login.html">Iniciar Sesión</a>
           <a id="logout" class="invisible" href="./login.html">Cerrar Sesión</a>
-          <button id="sign-up" onclick="window.location.href = '/sign-up.html';">Incribirse</button>
+          <button id="sign-up" onclick="window.location.href = 'sign-up.html';">Incribirse</button>
         </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="table-search">
-      <input type="search" placeholder="Buscar" id="projects-search" name="Search">
-      <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="flex flex-column justify-content-center">
+      <div class="table-search projects-search">
+        <input type="search" placeholder="Buscar" id="projects-search" name="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div id="project-container" class="card-container"></div>
     </div>
-    <div id="project-container" class="card-container"></div>
   </main>
 
   <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
