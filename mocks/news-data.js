@@ -1,4 +1,4 @@
-[
+export const news = [
     {
         "id": 1,
         "title": "Importante avance en la tecnología de energía solar",
@@ -269,4 +269,4 @@
         "author": "Javier López",
         "image": "../assets/images/news/noticia30.jpg"
     }
-]
+];

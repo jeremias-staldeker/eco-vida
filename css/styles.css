@@ -1,3 +1,20 @@
+@import url('cards.css');
+
+@font-face {
+  font-family: Inter;
+  src: url(../assets/fonts/Inter.ttf);
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(../assets/fonts/Quicksand.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
 :root {
   --font-family: Inter, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --color-white: white;
@@ -27,11 +44,6 @@
   --padding-desktop: 2em 3em;
 
   --quick-animation-time: 0.3s;
-}
-
-@font-face {
-  font-family: Inter;
-  src: url(../assets/fonts/Inter.ttf);
 }
 
 html,
