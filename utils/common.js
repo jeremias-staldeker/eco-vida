@@ -1,68 +1,90 @@
-const fs = require('fs');
-
 /**
- * Lee y devuelve el contenido de un archivo JSON.
- * @param {string} filePath - Ruta al archivo JSON.
+ * Lee y devuelve el contenido de un archivo JSON almacenado en el almacenamiento local del navegador.
+ * @param {string} key - Clave del objeto JSON en el almacenamiento local.
  * @returns {Object} Contenido del archivo JSON.
  */
-const readJSONFile = (filePath) => {
-  const content = fs.readFileSync(filePath, 'utf8');
+ export const readJSONFile = (key) => {
+  const content = localStorage.getItem(key);
   return JSON.parse(content);
 };
 
 /**
- * Guarda un objeto como contenido de un archivo JSON.
- * @param {string} filePath - Ruta al archivo JSON.
+ * Guarda un objeto como contenido de un archivo JSON en el almacenamiento local del navegador.
+ * @param {string} key - Clave del objeto JSON en el almacenamiento local.
  * @param {Object} data - Objeto a guardar en el archivo JSON.
  */
-const saveJSONFile = (filePath, data) => {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+export const saveJSONFile = (key, data) => {
+  const content = JSON.stringify(data, null, 2);
+  localStorage.setItem(key, content);
 };
 
 /**
- * Inserta un nuevo objeto en un archivo JSON.
- * @param {string} filePath - Ruta al archivo JSON.
+ * Inserta un nuevo objeto en un archivo JSON almacenado en el almacenamiento local del navegador.
+ * @param {string} key - Clave del objeto JSON en el almacenamiento local.
  * @param {Object} newObject - Nuevo objeto a insertar.
  */
-const insertObject = (filePath, newObject) => {
-  const data = readJSONFile(filePath);
+export const insertObject = (key, newObject) => {
+  const data = readJSONFile(key) || [];
   data.push(newObject);
-  saveJSONFile(filePath, data);
+  saveJSONFile(key, data);
 };
 
 /**
- * Actualiza un objeto existente en un archivo JSON.
- * @param {string} filePath - Ruta al archivo JSON.
+ * Actualiza un objeto existente en un archivo JSON almacenado en el almacenamiento local del navegador.
+ * @param {string} key - Clave del objeto JSON en el almacenamiento local.
  * @param {number} objectId - ID del objeto a actualizar.
  * @param {Object} updatedObject - Objeto actualizado.
  */
-const updateObject = (filePath, objectId, updatedObject) => {
-  const data = readJSONFile(filePath);
+export const updateObject = (key, objectId, updatedObject) => {
+  const data = readJSONFile(key) || [];
   const index = data.findIndex(obj => obj.id === objectId);
   if (index !== -1) {
     data[index] = updatedObject;
-    saveJSONFile(filePath, data);
+    saveJSONFile(key, data);
+  }
+};
+
+
+/**
+ * Elimina un objeto de un archivo JSON almacenado en el almacenamiento local del navegador según su ID.
+ * @param {string} key - Clave del objeto JSON en el almacenamiento local.
+ * @param {number|string} objectId - ID del objeto a eliminar.
+ */
+ export const deleteObject = (key, objectId) => {
+  const data = readJSONFile(key) || [];
+  const index = data.findIndex(obj => obj.id === objectId);
+  if (index !== -1) {
+    data.splice(index, 1);
+    saveJSONFile(key, data);
   }
 };
 
 /**
- * Elimina un objeto de un archivo JSON según su ID.
- * @param {string} filePath - Ruta del archivo JSON.
- * @param {number|string} objectId - ID del objeto a eliminar.
+ * Capitaliza la primera letra de una cadena.
+ * @param {string} str - La cadena a capitalizar.
+ * @returns {string} La cadena con la primera letra capitalizada.
  */
-const deleteObject = (filePath, objectId) => {
-  const data = readJSONFile(filePath);
-  const index = data.findIndex(obj => obj.id === objectId);
-  if (index !== -1) {
-    data.splice(index, 1);
-    saveJSONFile(filePath, data);
-  }
-}
+ export const capitalizeFirstLetter = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
 
-module.exports = {
-  readJSONFile,
-  saveJSONFile,
-  insertObject,
-  updateObject,
-  deleteObject
-}
+
+/**
+ * Convierte una fecha en un string con el formato "Día de la semana, Día de mes de Mes".
+ * @param {Date} date - La fecha a convertir.
+ * @returns {string} El string con el formato deseado.
+ */
+ export const formatDate = (date) => {
+  const options = { weekday: 'long', day: 'numeric', month: 'long' };
+  const formattedDate = date.toLocaleDateString('es-ES', options);
+  
+  const words = formattedDate.split(' ');
+  const capitalizedWords = words.map((word, index) => {
+    if (index === 0 || index === words.length - 1) {
+      return capitalizeFirstLetter(word);
+    }
+    return word;
+  });
+  
+  return capitalizedWords.join(' ');
+};
