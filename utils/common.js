@@ -75,7 +75,8 @@ export const capitalizeFirstLetter = (str) => {
  * @returns {string} El string con el formato deseado.
  */
 export const formatDate = (date) => {
-  const options = { weekday: 'long', day: 'numeric', month: 'long' };
+  try {
+    const options = { weekday: 'long', day: 'numeric', month: 'long' };
   const formattedDate = date.toLocaleDateString('es-ES', options);
 
   const words = formattedDate.split(' ');
@@ -87,6 +88,9 @@ export const formatDate = (date) => {
   });
 
   return capitalizedWords.join(' ');
+  } catch (error) {
+    return null;
+  }
 };
 
 /**
