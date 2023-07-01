@@ -41,7 +41,7 @@ const generateCardElement = (template, data) => {
     cardFooter.appendChild(inscriptionButton);
   }
 
-  return templateElem;
+  return templateElem.firstElementChild;;
 };
 
 

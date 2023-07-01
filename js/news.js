@@ -28,7 +28,7 @@ const generateCardElement = (template, data) => {
   const templateElem = document.createElement('div');
   templateElem.innerHTML = cardHTML;
 
-  return templateElem;
+  return templateElem.firstElementChild;;
 };
 
 /**
