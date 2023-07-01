@@ -166,6 +166,17 @@ nav {
   border: 1px solid;
 }
 
+.user-action-simple {
+  border: 0;
+  background: transparent;
+}
+
+.user-action-simple a {
+  border: 1px solid;
+  padding: 0.75em 1em;
+  border-radius: 0.75em;
+}
+
 .user-action > * {
   transition: all var(--quick-animation-time);
 }
