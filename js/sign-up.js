@@ -106,5 +106,8 @@ signUpButton.addEventListener('click', () => {
     users.push(newUser);
     saveJSONFile('logged-user', JSON.stringify(newUser));
   }
-  if (!error) window.location.href = '../index.html';
+  if (!error) {
+    alert('Registro Exitoso!')
+    window.location.href = '../index.html';
+  }
 });
