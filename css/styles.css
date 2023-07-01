@@ -92,6 +92,14 @@ form button {
   font-size: var(--font-size-medium);
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 .invisible {
   display: none;
 }
@@ -518,7 +526,7 @@ button[data-section="contacts"] {
 .contact-socials div {
   display: flex;
   align-items: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 /* Sobre Nosotros */
@@ -589,7 +597,6 @@ button[data-section="contacts"] {
 }
 
 .tab {
-  height: 70vh;
   border: 1px solid var(--color-grey);
   border-radius: var(--border-radius);
   border-top-left-radius: 0;
@@ -629,6 +636,12 @@ button[data-section="contacts"] {
   border-left: 0;
 }
 
+.projects-search,
+.news-search {
+  width: 100%;
+  justify-content: center;
+}
+
 input[type="search"] {
   height: 28px;
   border: 1px solid var(--color-grey);
@@ -637,6 +650,11 @@ input[type="search"] {
   color: var(--color-black);
   border-radius: 0.75em 0 0 0.75em;
   outline: none;
+}
+
+.projects-search input[type="search"],
+.news-search input[type="search"] {
+  min-width: 50%;
 }
 
 @media (max-width: 45em) {
@@ -786,7 +804,8 @@ input[type="search"] {
     grid-template-columns: 1fr;
   }
 
-  .login-form {
+  .login-form,
+  .sign-up-form {
     order: 2;
   }
 
