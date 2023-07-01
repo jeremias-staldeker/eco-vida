@@ -1,6 +1,10 @@
-import { news } from '../mocks/news-data.js'
-import { replaceAll, formatDate } from '../utils/common.js'
+import { projects } from '../mocks/projects-data.js'
+import { replaceAll, formatDate, filterObjects } from '../utils/common.js'
 import { isValidDate } from '../utils/validators.js'
+
+const projectsSearch = document.getElementById('projects-search');
+const cardContainer = document.getElementById('project-container');
+
 /**
  * Genera un elemento de tarjeta HTML a partir de una plantilla y datos proporcionados.
  * @param {string} template - La plantilla de la tarjeta en formato HTML.
@@ -29,21 +33,30 @@ const generateCardElement = (template, data) => {
 
 /**
  * Carga la plantilla de tarjeta y genera las tarjetas con los datos proporcionados.
- * Inserta las tarjetas generadas en el contenedor de tarjetas.
+ * Reemplaza todas las tarjetas existentes en el contenedor de tarjetas.
+ * @param {Array} [projects=[]] - Lista de proyectos para generar las tarjetas.
  */
-const loadCardTemplate = async () => {
+ const loadCardTemplate = async (projects = []) => {
   // Cargar el contenido del archivo card-template.html
   const response = await fetch('../templates/card-template.html');
   const templateHtml = await response.text();
 
-  const projectContainer = document.getElementById('project-container');
+  // Eliminar los hijos existentes del contenedor de tarjetas
+  cardContainer.innerHTML = '';
 
   // Generar y agregar las tarjetas para cada dato en la lista de noticias
-  news.forEach((cardData) => {
+  projects.forEach((cardData) => {
     const cardElement = generateCardElement(templateHtml, cardData);
-    projectContainer.appendChild(cardElement);
+    cardContainer.appendChild(cardElement);
   });
 };
 
 // Cargar la plantilla y generar las tarjetas
-loadCardTemplate();
+loadCardTemplate(projects);
+
+projectsSearch.addEventListener('keyup', (e) => {
+  const criteria = e.target.value;
+  const filteredProjects = filterObjects(projects, criteria, ['id', 'title', 'description']);
+  loadCardTemplate(filteredProjects);
+});
+
