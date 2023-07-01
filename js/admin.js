@@ -1,7 +1,7 @@
 import { news } from '../mocks/news-data.js'
 import { users } from '../mocks/users-data.js'
 import { projects } from '../mocks/projects-data.js'
-import { formatDate } from '../utils/common.js'
+import { filterObjects, formatDate } from '../utils/common.js'
 
 const usersTbody = document.getElementById('users-tbody');
 const newsTbody = document.getElementById('news-tbody');
@@ -59,46 +59,18 @@ loadContent(users, projects, news);
 
 usersSearch.addEventListener('keyup', (e) => {
   const criteria = e.target.value;
-  if (criteria.length > 0) {
-    const filteredUsers = users.filter((user) =>
-      user.id.toString().toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || user.name.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || user.name.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || user.phone.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || user.email.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || user.role.name.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-    );
-    loadContent(filteredUsers, projects, news);
-  } else {
-    loadContent(users, projects, news);
-  }
+  const filteredUsers = filterObjects(users, criteria, ['id', 'name', 'phone', 'email', 'role.name']);
+  loadContent(filteredUsers, projects, news);
 });
 
 projectSearch.addEventListener('keyup', (e) => {
   const criteria = e.target.value;
-  if (criteria.length > 0) {
-    const filteredProjects = projects.filter((project) =>
-      project.id.toString().toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || project.title.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || project.description.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-    );
-    loadContent(users, filteredProjects, news);
-  } else {
-    loadContent(users, projects, news);
-  }
+  const filteredProjects = filterObjects(projects, criteria, ['id', 'title', 'description']);
+  loadContent(users, filteredProjects, news);
 });
 
 newsSearch.addEventListener('keyup', (e) => {
   const criteria = e.target.value;
-  if (criteria.length > 0) {
-    const filteredNews = news.filter((n) =>
-      n.id.toString().toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || n.title.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || n.description.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-      || n.author.toLocaleLowerCase().includes(criteria.toLocaleLowerCase())
-    );
-    loadContent(users, projects, filteredNews);
-  } else {
-    loadContent(users, projects, news);
-  }
+  const filteredNews = filterObjects(news, criteria, ['id', 'title', 'description', 'author']);
+  loadContent(users, projects, filteredNews);
 });

@@ -107,6 +107,35 @@ export const replaceAll = (str, search, replacement) => {
 };
 
 /**
+ * A través de un accesor en formato string se obtiene el atributo del objeto.
+ * Retorna "undefined" si no se puede obtener el valor.
+ * Ej: part3[0].name
+ * @param {*} object
+ * @param {String} accesor
+ * @returns
+ */
+export const getObjectAttribute = (object, accesor) => {
+  try {
+    let cleanedAccesor = accesor.replace(/\[(\w+)\]/g, '.$1');
+    cleanedAccesor = cleanedAccesor.replace(/^\./, '');
+    const acc = cleanedAccesor.split('.');
+    let obj = JSON.parse(JSON.stringify(object));
+
+    if (acc.size === 0) {
+      return undefined;
+    }
+
+    acc.forEach((key) => {
+      obj = obj[key];
+    });
+
+    return obj;
+  } catch (error) {
+    return undefined;
+  }
+};
+
+/**
  * Verifica si una cadena de texto incluye de forma insensible a mayúsculas o minúsculas
  * una subcadena dada.
  * @param {string} str - Cadena de texto en la que se realizará la búsqueda.
@@ -126,7 +155,7 @@ export const includesIgnoreCase = (str, substring) => {
  * @param {Array} [searchableFields] - Campos de los objetos en los que se realizará la búsqueda. Si no se especifica, se realizará la búsqueda en todos los atributos del objeto.
  * @returns {Array} - Array filtrado de objetos que coinciden con el valor de filtro.
  */
- export const filterObjects = (objects, filterValue, searchableFields) => {
+export const filterObjects = (objects, filterValue, searchableFields) => {
   if (filterValue.length > 0) {
     return objects.filter((obj) => {
       if (!searchableFields) {
@@ -136,8 +165,10 @@ export const includesIgnoreCase = (str, substring) => {
         );
       } else {
         // Búsqueda en los campos de búsqueda específicos
-        return searchableFields.some((field) =>
-          includesIgnoreCase(obj[field], filterValue)
+        return searchableFields.some((field) => {
+          const objValue = getObjectAttribute(obj, field);
+          return includesIgnoreCase(objValue, filterValue);
+        }
         );
       }
     });
