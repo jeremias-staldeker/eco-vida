@@ -35,13 +35,13 @@ const loadCardTemplate = async () => {
   // Cargar el contenido del archivo card-template.html
   const response = await fetch('../templates/card-template.html');
   const templateHtml = await response.text();
-  
-  const cardContainer = document.getElementById('news-container');
+
+  const projectContainer = document.getElementById('project-container');
 
   // Generar y agregar las tarjetas para cada dato en la lista de noticias
   news.forEach((cardData) => {
     const cardElement = generateCardElement(templateHtml, cardData);
-    cardContainer.appendChild(cardElement);
+    projectContainer.appendChild(cardElement);
   });
 };
 
