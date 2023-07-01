@@ -66,7 +66,7 @@ button {
   color: var(--color-black);
   cursor: pointer;
   margin: 0;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
 }
 
 button:hover {
@@ -105,7 +105,7 @@ form button {
 .field > textarea {
   padding: 1em;
   border-radius: 0.75em;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   color: var(--color-black);
   outline: none;
   box-shadow: none;
@@ -163,7 +163,7 @@ nav {
   background-color: var(--color-lightgrey);
   padding: 0.3em;
   border-radius: 1rem;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
 }
 
 .user-action-simple {
@@ -172,7 +172,7 @@ nav {
 }
 
 .user-action-simple a {
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   padding: 0.75em 1em;
   border-radius: 0.75em;
 }
@@ -209,7 +209,7 @@ nav {
   padding: 1em;
   place-content: center;
   margin: auto;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
 }
 
 .login-form {
@@ -239,7 +239,7 @@ nav {
   position: relative;
   object-fit: cover;
   background-size: cover;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   background-repeat: no-repeat;
   border-radius: var(--border-radius);
   background-image: url(../assets/images/forest.jpg);
@@ -295,7 +295,7 @@ nav {
   position: relative;
   object-fit: cover;
   background-size: cover;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   background-repeat: no-repeat;
   border-radius: var(--border-radius);
   background-image: url(../assets/images/forest.jpg);
@@ -342,7 +342,7 @@ nav {
   position: relative;
   cursor: pointer;
   border-radius: var(--border-radius);
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   margin: 0;
   padding: 0;
   outline: 0;
@@ -503,13 +503,13 @@ button[data-section="contacts"] {
   border-radius: 0.5em;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   border-bottom: 0;
 }
 
 .tab {
   height: 70vh;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   border-radius: var(--border-radius);
   border-top-left-radius: 0;
   background-color: var(--color-white);
