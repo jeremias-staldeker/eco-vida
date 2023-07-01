@@ -24,8 +24,8 @@
 
     <nav>
       <ul id="navigation" class="navigation flex" data-visible="false">
-        <li class="user-action">
-          <button>Incribirse</button>
+        <li class="user-action user-action-simple">
+          <button onclick="window.location.href = 'sign-up.html';">Incribirse</button>
         </li>
       </ul>
     </nav>
@@ -50,12 +50,14 @@
             <div class="login-help">
               <a href="#">Ayuda, no puedo iniciar sesión</a>
             </div>
-            <button>
+            <button type="button">
               Iniciar Sesión
             </button>
           </form>
         </div>
-        <div class="login-banner">Image</div>
+        <div class="login-banner">
+          <div class="app-logo"></div>
+        </div>
       </div>
     </div>
 
