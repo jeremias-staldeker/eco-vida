@@ -43,6 +43,10 @@ h1 {
   padding: 1em 0em 0rem 2.2rem;
 }
 
+header {
+  border-bottom: 1px solid black;
+}
+
 nav {
   width: 100%;
 }
@@ -210,6 +214,49 @@ button[data-section="contacts"] {
   background-color: lightgoldenrodyellow;
 }
 
+/* Sign Up */
+.sign-up-card {
+  padding: 2em 3em;
+}
+
+.sign-up-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 75%;
+  place-content: center;
+  margin: auto;
+  background: #ebebeb;
+  border-radius: 2em;
+  gap: 1em;
+  padding: 1em;
+  grid-template-rows: 75vh;
+}
+
+.sign-up-card .banner {
+  text-align: center;
+  position: relative;
+}
+
+.sign-up-card h1 {
+  font-weight: normal;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sign-up-banner {
+  height: 100%;
+  background: lightgreen;
+  border-radius: 2em;
+}
+
+.sign-up-card h2 {
+  text-align: center;
+  font-weight: 500;
+}
+
 /* Contacto */
 .contact-section {
   padding: 2em 3em;
@@ -219,6 +266,7 @@ button[data-section="contacts"] {
   margin-top: 0;
   margin-bottom: 2.5rem;
   font-size: clamp(3em, min(4.175vw, 5em), 5em);
+  font-weight: normal;
 }
 
 .contact-section p {
@@ -296,6 +344,112 @@ form > h2 {
   background: white;
 }
 
+/* Sobre Nosotros */
+.about-us-grid {
+  display: grid;
+  padding: 0 3em;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr 0.1fr 1fr;
+  gap: 1em;
+  border-bottom: 1px solid black;
+}
+
+.about-us-grid .history {
+  padding: 2rem 0em;
+}
+
+.about-us-grid h1 {
+  padding: 2rem 0em;
+  margin: 0;
+  font-size: clamp(3em, min(4.175vw, 5em), 5em);
+  font-weight: normal;
+  font-style: italic;
+}
+
+.about-us-grid h2 {
+  font-weight: normal;
+  font-size: 3em;
+  margin: 0;
+}
+
+.about-us-grid p {
+  font-size: 1.175em;
+}
+
+.about-us-grid .separator {
+  width: 1px;
+  height: 100%;
+  background-color: black;
+}
+
+/* Administración */
+.tabs-container {
+  padding: 2em 3em;
+  height: 75vh;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabs label {
+  cursor: pointer;
+  padding: 1em 2em;
+  background-color: transparent;
+  opacity: 1;
+  border: 0;
+}
+
+.tabs input[type="radio"]:checked + label {
+  border-radius: 0.5em;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid;
+  border-bottom: 0;
+}
+
+.tab {
+  height: 70vh;
+  border: 1px solid black;
+  border-radius: 2em;
+  border-top-left-radius: 0;
+  background: white;
+}
+
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs input[type="radio"]:checked + label {
+  background: #fff;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
 @media screen and (max-width: 1366px) {
   .home-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -358,6 +512,15 @@ form > h2 {
   .user-action a {
     color: black;
     text-align: center;
+  }
+
+  .about-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-us-grid .separator {
+    width: 100%;
+    height: 1px;
   }
 
   .contact-grid {
