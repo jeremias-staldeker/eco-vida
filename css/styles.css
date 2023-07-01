@@ -116,7 +116,7 @@ form button {
 
 header {
   background-color: var(--color-white);
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--color-grey);
 }
 
 nav {
@@ -447,7 +447,7 @@ button[data-section="contacts"] {
   grid-auto-rows: auto;
   grid-template-columns: 1fr 0.1fr 1fr;
   gap: 1em;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--color-grey);
 }
 
 .about-us-grid .history {
@@ -475,7 +475,7 @@ button[data-section="contacts"] {
 .about-us-grid .separator {
   width: 1px;
   height: 100%;
-  background-color: var(--color-black);
+  background-color: var(--color-grey);
 }
 
 /* Administración */
