@@ -3,7 +3,7 @@
  * @param {string} key - Clave del objeto JSON en el almacenamiento local.
  * @returns {Object} Contenido del archivo JSON.
  */
- export const readJSONFile = (key) => {
+export const readJSONFile = (key) => {
   const content = localStorage.getItem(key);
   return JSON.parse(content);
 };
@@ -50,7 +50,7 @@ export const updateObject = (key, objectId, updatedObject) => {
  * @param {string} key - Clave del objeto JSON en el almacenamiento local.
  * @param {number|string} objectId - ID del objeto a eliminar.
  */
- export const deleteObject = (key, objectId) => {
+export const deleteObject = (key, objectId) => {
   const data = readJSONFile(key) || [];
   const index = data.findIndex(obj => obj.id === objectId);
   if (index !== -1) {
@@ -64,7 +64,7 @@ export const updateObject = (key, objectId, updatedObject) => {
  * @param {string} str - La cadena a capitalizar.
  * @returns {string} La cadena con la primera letra capitalizada.
  */
- export const capitalizeFirstLetter = (str) => {
+export const capitalizeFirstLetter = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
@@ -74,10 +74,10 @@ export const updateObject = (key, objectId, updatedObject) => {
  * @param {Date} date - La fecha a convertir.
  * @returns {string} El string con el formato deseado.
  */
- export const formatDate = (date) => {
+export const formatDate = (date) => {
   const options = { weekday: 'long', day: 'numeric', month: 'long' };
   const formattedDate = date.toLocaleDateString('es-ES', options);
-  
+
   const words = formattedDate.split(' ');
   const capitalizedWords = words.map((word, index) => {
     if (index === 0 || index === words.length - 1) {
@@ -85,6 +85,19 @@ export const updateObject = (key, objectId, updatedObject) => {
     }
     return word;
   });
-  
+
   return capitalizedWords.join(' ');
+};
+
+/**
+ * Reemplaza todas las ocurrencias de una subcadena en una cadena dada.
+ * @param {string} str - La cadena en la que se realizará el reemplazo.
+ * @param {string} search - La subcadena que se desea reemplazar.
+ * @param {string} replacement - La subcadena de reemplazo.
+ * @returns {string} La cadena resultante después de realizar todos los reemplazos.
+ */
+export const replaceAll = (str, search, replacement) => {
+  //Esta función simula el comportamiento del método `replaceAll` en versiones de ECMAScript
+  //anteriores a ES2021, que no incluían dicho método. 
+  return str.split(search).join(replacement);
 };
