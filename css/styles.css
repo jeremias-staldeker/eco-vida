@@ -221,7 +221,6 @@ button[data-section="contacts"] {
 
 .sign-up-grid {
   display: grid;
-  /* grid-template-rows: auto; */
   grid-template-columns: 1fr 1fr;
   max-width: 75%;
   place-content: center;
@@ -235,14 +234,12 @@ button[data-section="contacts"] {
 
 .sign-up-card .banner {
   text-align: center;
-  /* padding: 1em; */
   position: relative;
 }
 
 .sign-up-card h1 {
   font-weight: normal;
   margin: 0;
-  /* height: 15%; */
   position: absolute;
   left: 50%;
   top: 50%;
@@ -383,6 +380,74 @@ form > h2 {
   width: 1px;
   height: 100%;
   background-color: black;
+}
+
+/* Administración */
+.tabs-container {
+  padding: 2em 3em;
+  height: 75vh;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabs label {
+  cursor: pointer;
+  padding: 1em 2em;
+  background-color: transparent;
+  opacity: 1;
+  border: 0;
+}
+
+.tabs input[type="radio"]:checked + label {
+  border-radius: 0.5em;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid;
+  border-bottom: 0;
+}
+
+.tab {
+  height: 70vh;
+  border: 1px solid black;
+  border-radius: 2em;
+  border-top-left-radius: 0;
+  background: white;
+}
+
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs input[type="radio"]:checked + label {
+  background: #fff;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
 }
 
 @media screen and (max-width: 1366px) {
