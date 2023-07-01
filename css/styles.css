@@ -214,6 +214,52 @@ button[data-section="contacts"] {
   background-color: lightgoldenrodyellow;
 }
 
+/* Sign Up */
+.sign-up-card {
+  padding: 2em 3em;
+}
+
+.sign-up-grid {
+  display: grid;
+  /* grid-template-rows: auto; */
+  grid-template-columns: 1fr 1fr;
+  max-width: 75%;
+  place-content: center;
+  margin: auto;
+  background: #ebebeb;
+  border-radius: 2em;
+  gap: 1em;
+  padding: 1em;
+  grid-template-rows: 75vh;
+}
+
+.sign-up-card .banner {
+  text-align: center;
+  /* padding: 1em; */
+  position: relative;
+}
+
+.sign-up-card h1 {
+  font-weight: normal;
+  margin: 0;
+  /* height: 15%; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sign-up-banner {
+  height: 100%;
+  background: lightgreen;
+  border-radius: 2em;
+}
+
+.sign-up-card h2 {
+  text-align: center;
+  font-weight: 500;
+}
+
 /* Contacto */
 .contact-section {
   padding: 2em 3em;
