@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: "Quicksand";
+  font-family: Quicksand;
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
@@ -16,7 +16,7 @@
 }
 
 :root {
-  --font-family: Inter, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family: Quicksand, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --color-white: white;
   --color-red: #990000;
   --color-lightgrey: #efefef;
@@ -248,7 +248,6 @@ nav {
   font-size: var(--font-responsive-ratio);
   font-weight: var(--font-weight-normal);
   margin-top: 0;
-  font-style: italic;
 }
 
 .login-form form {
@@ -423,6 +422,12 @@ button[data-section="contacts"] {
 }
 
 /* Contacto */
+.contact-card {
+  padding: var(--padding-desktop);
+  max-width: 75%;
+  margin: auto;
+}
+
 .contact-section {
   padding: var(--padding-desktop);
 }
@@ -449,6 +454,10 @@ button[data-section="contacts"] {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
+  padding: 1em;
+  border-radius: 2em;
+  background: var(--color-grey);
+  gap: 1em;
 }
 
 .contact-grid form {
@@ -465,12 +474,59 @@ button[data-section="contacts"] {
   font-weight: var(--font-weight-normal);
 }
 
+.contact-banner {
+  border-radius: var(--border-radius);
+  background-image: url(../assets/images/contact.jpg);
+  background-size: cover;
+  filter: grayscale(0.4);
+}
+
+.contact-banner h1 {
+  color: var(--color-white);
+  text-align: center;
+  text-shadow: 5px 7px 10px rgba(0, 0, 0, 1);
+  font-weight: var(--font-weight-normal);
+}
+
+.aditional-contact {
+  padding: 2em;
+  font-size: 1.175em;
+  color: var(--color-white);
+}
+
+.aditional-contact > span {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.contact-socials i {
+  font-size: 2em;
+}
+
+.contact-socials span {
+  font-weight: bold;
+}
+
+.contact-socials div {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
 /* Sobre Nosotros */
 .about-us-grid {
   display: grid;
   padding: 0 3em;
   grid-auto-rows: auto;
-  grid-template-columns: 1fr 0.1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1em;
   border-bottom: 1px solid var(--color-grey);
 }
