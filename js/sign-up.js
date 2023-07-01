@@ -1,3 +1,8 @@
+import { users } from '../mocks/users-data.js'
+import { saveJSONFile } from '../utils/common.js';
+import { isEmptyString, isValidEmail, isValidPhone } from '../utils/validators.js';
+
+
 // Obtener los elementos del formulario
 const nameInput = document.getElementById('name');
 const nameInputError = document.getElementById('name-error');
@@ -10,75 +15,6 @@ const passwordInputError = document.getElementById('password-error');
 const confirmPasswordInput = document.getElementById('confirmPassword');
 const confirmPasswordInputError = document.getElementById('confirm-password-error');
 const signUpButton = document.getElementById('sign-up-button');
-
-/**
- * Verifica si el valor proporcionado es un string vacío.
- * @param {string} value - Valor a verificar.
- * @returns {boolean} - True si es un string vacío, false en caso contrario.
- */
-const isEmptyString = (value) => {
-  try {
-    return value.trim() === '';
-  } catch (error) {
-    return false;
-  }
-};
-
-
-/**
- * Verifica si el valor proporcionado es un email válido.
- * @param {string} value - Valor a verificar.
- * @returns {boolean} - True si es un email válido, false en caso contrario.
- */
-const isValidEmail = (value) => {
-  try {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(value);
-  } catch (error) {
-    return false;
-  }
-};
-
-/**
- * Verifica si el valor proporcionado es un número de teléfono válido.
- * @param {string} value - Valor a verificar.
- * @returns {boolean} - True si es un número de teléfono válido, false en caso contrario.
- */
-const isValidPhone = (value) => {
-  try {
-    const phoneRegex = /^[0-9]{10}$/;
-    return phoneRegex.test(value);
-  } catch (error) {
-    return false;
-  }
-};
-
-const users = [
-  {
-    "id": "1",
-    "name": "Administrador",
-    "phone": "123456789",
-    "email": "admin@example.com",
-    "password": "admin123",
-    "creationDate": "2023-06-30T12:00:00Z",
-    "role": {
-      "id": 1,
-      "name": "admin"
-    }
-  },
-  {
-    "id": "2",
-    "name": "Pablo Fernandez",
-    "phone": "987654321",
-    "email": "user@example.com",
-    "password": "user123",
-    "creationDate": "2023-06-30T12:00:00Z",
-    "role": {
-      "id": 2,
-      "name": "usuario"
-    }
-  }
-];
 
 // Agregar un evento al botón
 signUpButton.addEventListener('click', () => {
@@ -95,6 +31,8 @@ signUpButton.addEventListener('click', () => {
     nameInputError.innerText = 'Nombre Completo es requerido';
     nameInputError.classList.remove('invisible');
     error = true;
+  } else {
+    nameInputError.classList.add('invisible');
   }
 
   if (isEmptyString(phone)) {
@@ -105,6 +43,8 @@ signUpButton.addEventListener('click', () => {
     phoneInputError.innerText = 'Formato de teléfono invalido';
     phoneInputError.classList.remove('invisible');
     error = true;
+  } else {
+    phoneInputError.classList.add('invisible');
   }
 
   if (isEmptyString(email)) {
@@ -122,34 +62,35 @@ signUpButton.addEventListener('click', () => {
       emailInputError.innerText = 'El email ingresado ya se encuentra en uso';
       emailInputError.classList.remove('invisible');
     }
+    emailInputError.classList.add('invisible');
   }
 
   if (isEmptyString(password)) {
     passwordInputError.innerText = 'Contraseña requerida';
     passwordInputError.classList.remove('invisible');
     error = true;
+  } else {
+    passwordInputError.classList.add('invisible');
   }
 
   if (isEmptyString(confirmPassword)) {
     confirmPasswordInputError.innerText = 'Confirmar Contraseña requerida';
     confirmPasswordInputError.classList.remove('invisible');
     error = true;
+  } else {
+    confirmPasswordInputError.classList.add('invisible');
   }
 
   if (confirmPassword !== password) {
     confirmPasswordInputError.innerText = 'Las contraseñas no coinciden';
     confirmPasswordInputError.classList.remove('invisible');
     error = true;
+  } else {
+    confirmPasswordInputError.classList.add('invisible');
   }
 
 
   if (!error) {
-    nameInputError.classList.add('invisible');
-    phoneInputError.classList.add('invisible');
-    emailInputError.classList.add('invisible');
-    passwordInputError.classList.add('invisible');
-    confirmPasswordInputError.classList.add('invisible');
-
     const newUser = {
       id: Math.random() * new Date().getTime(),
       name,
@@ -163,7 +104,7 @@ signUpButton.addEventListener('click', () => {
       }
     };
     users.push(newUser);
-    localStorage.setItem('logged-user', JSON.stringify(newUser));
+    saveJSONFile('logged-user', JSON.stringify(newUser));
   }
   if (!error) window.location.href = '../index.html';
 });

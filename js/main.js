@@ -11,7 +11,6 @@ const signUpAction = document.getElementById("sign-up");
 
 navLink.forEach(n => {
   n.addEventListener("click", () => {
-    // chargeContent(n.id);
     updateAttribute(n);
     closeMobileMenu();
   });
@@ -48,47 +47,6 @@ window.addEventListener('resize', function () {
     timer = null;
   }, 100);
 });
-
-// function chargeContent(contentId) {
-//   let urlContent = '';
-//   switch (contentId) {
-//     case "nav-home":
-//       urlContent = "../views/home.html"
-//       break;
-//     case "nav-projects":
-//       urlContent = "../views/projects.html"
-//       break;
-//     case "nav-news":
-//       urlContent = "../views/news.html"
-//       break;
-//     case "nav-about-us":
-//       urlContent = "../views/about-us.html"
-//       break;
-//     case "nav-contact":
-//       urlContent = "../views/contact.html"
-//       break;
-//     case "nav-admin":
-//       urlContent = "../views/admin.html"
-//       break;
-//   }
-
-//   fetch(urlContent)
-//     .then(resp => {
-//       if (resp.ok) {
-//         return resp.text();
-//       } else {
-//         throw ("Error");
-//       }
-//     })
-//     .then(html => {
-//       mainContent.innerHTML = html;
-//       window.scrollTo({ top: 0, behavior: 'smooth' });
-//     })
-//     .catch(error => {
-//       console.error(error);
-//       mainContent.innerHTML = '<div class="content-error">Error cargando contenido</div>';
-//     });
-// };
 
 function updateAttribute(element) {
   navLink.forEach((n) => {
