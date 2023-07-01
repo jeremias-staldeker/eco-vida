@@ -67,14 +67,17 @@ export const isValidPhone = (value) => {
 };
 
 /**
-* Verifica si el valor proporcionado es una fecha válida.
-* @param {string} value - Valor a verificar.
-* @returns {boolean} - True si es una fecha válida, false en caso contrario.
-*/
+ * Verifica si el valor proporcionado es una fecha válida.
+ * @param {string} value - Valor a verificar.
+ * @returns {boolean} True si es una fecha válida, false en caso contrario.
+ */
 export const isValidDate = (value) => {
     try {
+        if (typeof value !== 'string') {
+            return false; // El valor no es una cadena
+        }
         const date = new Date(value);
-        return !isNaN(date);
+        return !isNaN(date.getTime());
     } catch (error) {
         return false;
     }
