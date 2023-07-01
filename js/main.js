@@ -2,14 +2,25 @@ const mainContent = document.querySelector("main");
 const navLink = document.querySelectorAll('[data-role="nav-link"]');
 const navigation = document.querySelector('.navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
+const navAdmin = document.getElementById("nav-admin");
+
+const userActionContainer = document.getElementById("user-action");
+const loginAction = document.getElementById("login");
+const logoutAction = document.getElementById("logout");
+const signUpAction = document.getElementById("sign-up");
 
 navLink.forEach(n => {
   n.addEventListener("click", () => {
-    // chargeContent(n.id);
     updateAttribute(n);
     closeMobileMenu();
   });
 });
+
+if (logoutAction) {
+  logoutAction.addEventListener('click', () => {
+    localStorage.removeItem('logged-user');
+  });
+}
 
 navToggle.addEventListener('click', () => {
   const visibility = navigation.getAttribute('data-visible');
@@ -37,47 +48,6 @@ window.addEventListener('resize', function () {
   }, 100);
 });
 
-// function chargeContent(contentId) {
-//   let urlContent = '';
-//   switch (contentId) {
-//     case "nav-home":
-//       urlContent = "../views/home.html"
-//       break;
-//     case "nav-projects":
-//       urlContent = "../views/projects.html"
-//       break;
-//     case "nav-news":
-//       urlContent = "../views/news.html"
-//       break;
-//     case "nav-about-us":
-//       urlContent = "../views/about-us.html"
-//       break;
-//     case "nav-contact":
-//       urlContent = "../views/contact.html"
-//       break;
-//     case "nav-admin":
-//       urlContent = "../views/admin.html"
-//       break;
-//   }
-
-//   fetch(urlContent)
-//     .then(resp => {
-//       if (resp.ok) {
-//         return resp.text();
-//       } else {
-//         throw ("Error");
-//       }
-//     })
-//     .then(html => {
-//       mainContent.innerHTML = html;
-//       window.scrollTo({ top: 0, behavior: 'smooth' });
-//     })
-//     .catch(error => {
-//       console.error(error);
-//       mainContent.innerHTML = '<div class="content-error">Error cargando contenido</div>';
-//     });
-// };
-
 function updateAttribute(element) {
   navLink.forEach((n) => {
     n.setAttribute('data-status', '');
@@ -96,4 +66,24 @@ function closeMobileMenu() {
   }
 }
 
-// chargeContent("nav-home");
+function checkLoggedUser() {
+  const user = JSON.parse(localStorage.getItem('logged-user'));
+  if (user) {
+    if (user?.role?.name === 'admin') {
+      navAdmin?.setAttribute('data-visible', true);
+    } else {
+      navAdmin?.setAttribute('data-visible', false);
+    }
+    if (loginAction) loginAction.classList.add('invisible');
+    if (signUpAction) signUpAction.classList.add('invisible');
+    if (logoutAction) logoutAction.classList.remove('invisible');
+    if (userActionContainer) userActionContainer.classList.add('user-action-simple');
+  } else {
+    if (loginAction) loginAction.classList.remove('invisible');
+    if (signUpAction) signUpAction.classList.remove('invisible');
+    if (userActionContainer) userActionContainer.classList.remove('user-action-simple');
+    if (logoutAction) logoutAction.classList.add('invisible');
+  }
+}
+
+checkLoggedUser();

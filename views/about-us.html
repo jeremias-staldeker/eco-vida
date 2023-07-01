@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/main.js" defer></script>
+  <script src="../js/main.js" defer type="module"></script>
   <title>EcoVida</title>
 </head>
 
@@ -37,11 +37,13 @@
           <a id="nav-contact" data-role="nav-link" data-status="" href="./contact.html">Contacto</a>
         </li>
         <li>
-          <a id="nav-admin" data-role="nav-link" data-status="" href="./administration.html">Administración</a>
+          <a id="nav-admin" data-role="nav-link" data-status="" data-visible="false"
+            href="./administration.html">Administración</a>
         </li>
-        <li class="user-action">
-          <a href="./login.html">Iniciar Sesión</a>
-          <button onclick="window.location.href = 'sign-up.html';">Incribirse</button>
+        <li id="user-action" class="user-action">
+          <a id="login" href="./login.html">Iniciar Sesión</a>
+          <a id="logout" class="invisible" href="./login.html">Cerrar Sesión</a>
+          <button id="sign-up" onclick="window.location.href = '/sign-up.html';">Incribirse</button>
         </li>
       </ul>
     </nav>

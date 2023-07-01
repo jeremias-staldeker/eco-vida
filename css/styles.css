@@ -1,4 +1,4 @@
-@import url('cards.css');
+@import url("cards.css");
 
 @font-face {
   font-family: Inter;
@@ -6,14 +6,14 @@
 }
 
 @font-face {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url(../assets/fonts/Quicksand.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(../assets/fonts/Quicksand.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
 }
-
 
 :root {
   --font-family: Inter, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -92,6 +92,14 @@ form button {
   font-size: var(--font-size-medium);
 }
 
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 .red {
   color: var(--color-red);
 }
@@ -136,7 +144,7 @@ nav {
 }
 
 .logo {
-  width: 130px;
+  width: 150px;
   cursor: pointer;
   padding: 1em 0em 0rem 2.2rem;
 }
@@ -147,6 +155,7 @@ nav {
   z-index: 1000;
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);
+  margin-left: 2rem;
 }
 
 .navigation a {
@@ -160,6 +169,10 @@ nav {
   text-decoration-style: wavy;
   text-decoration-skip-ink: none;
   text-underline-offset: 0.1em;
+}
+
+#nav-admin[data-visible="false"] {
+  display: none;
 }
 
 .mobile-nav-toggle {
@@ -279,6 +292,7 @@ nav {
 
 .sign-up-grid {
   display: grid;
+  grid-template-rows: min-content;
   grid-template-columns: 1fr 1fr;
   max-width: 75%;
   place-content: center;
@@ -287,7 +301,6 @@ nav {
   border-radius: var(--border-radius);
   gap: 1em;
   padding: 1em;
-  grid-template-rows: 75vh;
 }
 
 .sign-up-card .banner {
@@ -547,6 +560,29 @@ button[data-section="contacts"] {
   display: block;
 }
 
+.table-search {
+  display: flex;
+  float: right;
+  margin: 3rem 0rem;
+}
+
+.table-search i {
+  padding: 1rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 0 0.75em 0.75em 0;
+  border-left: 0;
+}
+
+input[type="search"] {
+  height: 28px;
+  border: 1px solid var(--color-grey);
+  padding: 1.5rem 1rem;
+  font-size: var(--font-size-medium);
+  color: var(--color-black);
+  border-radius: 0.75em 0 0 0.75em;
+  outline: none;
+}
+
 @media (max-width: 45em) {
   .tabs .tab,
   .tabs label {
@@ -629,6 +665,10 @@ button[data-section="contacts"] {
   .user-action a {
     color: var(--color-black);
     text-align: center;
+  }
+
+  .user-action-simple a {
+    color: var(--color-white);
   }
 
   .about-us-grid {

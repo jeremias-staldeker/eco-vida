@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/main.js" defer></script>
+  <script src="../js/main.js" defer type="module"></script>
+  <script src="../js/sign-up.js" defer type="module"></script>
   <title>EcoVida</title>
 </head>
 
@@ -46,31 +47,35 @@
             <div class="field">
               <label for="name">Nombre Completo<span class="red">*</span></label>
               <input type="text" name="name" id="name">
+              <span id="name-error" class="red invisible"></span>
             </div>
             <div class="field">
               <label for="phone">Teléfono<span class="red">*</span></label>
               <input type="text" name="phone" id="phone">
+              <span id="phone-error" class="red invisible"></span>
             </div>
             <div class="field">
               <label for="email">Email<span class="red">*</span></label>
               <input type="email" name="email" id="email">
+              <span id="email-error" class="red invisible"></span>
             </div>
             <div class="field">
               <label for="password">Constraseña<span class="red">*</span></label>
               <input type="password" name="password" id="password">
+              <span id="password-error" class="red invisible"></span>
             </div>
             <div class="field">
               <label for="confirmPassword">Confirma Constraseña<span class="red">*</span></label>
               <input type="password" name="confirmPassword" id="confirmPassword">
+              <span id="confirm-password-error" class="red invisible"></span>
             </div>
-            <button>
+            <button id="sign-up-button" type="button">
               Inscribirse
             </button>
           </form>
         </div>
       </div>
     </div>
-
 
   </main>
 

@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/main.js" defer></script>
+  <script src="../js/main.js" defer type="module"></script>
+  <script src="../js/contact.js" defer type="module"></script>
   <title>EcoVida</title>
 </head>
 
@@ -37,11 +38,13 @@
           <a id="nav-contact" data-role="nav-link" data-status="active" href="./contact.html">Contacto</a>
         </li>
         <li>
-          <a id="nav-admin" data-role="nav-link" data-status="" href="./administration.html">Administración</a>
+          <a id="nav-admin" data-role="nav-link" data-status="" data-visible="false"
+            href="./administration.html">Administración</a>
         </li>
-        <li class="user-action">
-          <a href="./login.html">Iniciar Sesión</a>
-          <button onclick="window.location.href = 'sign-up.html';">Incribirse</button>
+        <li id="user-action" class="user-action">
+          <a id="login" href="./login.html">Iniciar Sesión</a>
+          <a id="logout" class="invisible" href="./views/login.html">Cerrar Sesión</a>
+          <button id="sign-up" onclick="window.location.href = '/views/sign-up.html';">Incribirse</button>
         </li>
       </ul>
     </nav>
@@ -70,27 +73,32 @@
           <div class="field">
             <label for="name">Nombre Completo<span class="red">*</span></label>
             <input type="text" name="name" id="name">
+            <span id="name-error" class="red invisible"></span>
           </div>
           <div class="field">
             <label for="email">Email<span class="red">*</span></label>
             <input type="email" name="email" id="email">
+            <span id="email-error" class="red invisible"></span>
           </div>
           <div class="field">
             <label for="phone">Teléfono<span class="red">*</span></label>
             <input type="text" name="phone" id="phone">
+            <span id="phone-error" class="red invisible"></span>
           </div>
           <div class="field">
             <label for="message">Mensaje<span class="red">*</span></label>
             <textarea name="message" id="message" cols="20" rows="10"></textarea>
+            <span id="message-error" class="red invisible"></span>
           </div>
           <div class="red required-fields">(*) Campos Requeridos</div>
-          <button type="button" class="form-button">Enviar Mensaje</button>
+          <button type="button" id="send-message" class="form-button">Enviar Mensaje</button>
         </form>
       </div>
     </section>
 
   </main>
 
+  <script src="../js/contact.js"></script>
   <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
 </body>
 

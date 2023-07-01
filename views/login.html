@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/main.js" defer></script>
+  <script src="../js/main.js" defer type="module"></script>
+  <script src="../js/login.js" defer type="module"></script>
   <title>EcoVida</title>
 </head>
 
@@ -39,18 +40,21 @@
         <div class="login-form">
           <h1>¡Bienvenido!</h1>
           <form>
+            <span id="user-error" class="red invisible"></span>
             <div class="field">
               <label for="email">Email<span class="red">*</span></label>
               <input type="text" name="email" id="email">
+              <span id="email-error" class="red invisible"></span>
             </div>
             <div class="field">
               <label for="password">Constraseña<span class="red">*</span></label>
               <input type="password" name="password" id="password">
+              <span id="password-error" class="red invisible"></span>
             </div>
             <div class="login-help">
               <a href="#">Ayuda, no puedo iniciar sesión</a>
             </div>
-            <button type="button">
+            <button type="button" id="login-button">
               Iniciar Sesión
             </button>
           </form>
