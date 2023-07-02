@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer type="module"></script>
+  <title>EcoVida</title>
+</head>
+
+<body>
+
+  <header class="flex">
+    <div>
+      <a id="nav-home" class="nav-logo" data-role="nav-link">
+        <img class="logo" src="./assets/images/logo.png" alt="EcoVida">
+      </a>
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false" type="button">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="navigation" class="navigation flex" data-visible="false">
+        <li>
+          <a id="nav-projects" data-role="nav-link" data-status="" href="./views/projects.html">Proyectos</a>
+        </li>
+        <li>
+          <a id="nav-news" data-role="nav-link" data-status="" href="./views/news.html">Noticias</a>
+        </li>
+        <li>
+          <a id="nav-about-us" data-role="nav-link" data-status="" href="./views/about-us.html">Sobre Nosotros</a>
+        </li>
+        <li>
+          <a id="nav-contact" data-role="nav-link" data-status="" href="./views/contact.html">Contacto</a>
+        </li>
+        <li>
+          <a id="nav-admin" data-role="nav-link" data-status="false" data-visible="false"
+            href="./views/administration.html">Administración</a>
+        </li>
+        <li id="user-action" class="user-action">
+          <a id="login" href="./views/login.html">Iniciar Sesión</a>
+          <button id="sign-up" onclick="window.location.href = '/views/sign-up.html';">Incribirse</button>
+          <span id="logged-user" class="invisible"></span>
+          <a id="logout" class="invisible" href="./views/login.html">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <div class="home-grid">
+      <button data-section="about-us" type="button" onclick="window.location.href = '/views/about-us.html';">
+        <span>Descubre nuestra historia</span>
+        <p>EcoVida promueve la conciencia ambiental, prácticas sostenibles y conservación de recursos en Argentina, a
+          través de programas educativos y proyectos de conservación en colaboración con la comunidad y entidades
+          gubernamentales.</p>
+        <h1>Nosotros</h1>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </button>
+      <button data-section="projects" type="button" onclick="window.location.href = '/views/projects.html';">
+        <h1>Proyectos</h1>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </button>
+      <button data-section="news" type="button" onclick="window.location.href = '/views/news.html';">
+        <span>Que hay de nuevo</span>
+        <h1>Noticias</h1>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </button>
+      <button data-section="contacts" type="button" onclick="window.location.href = '/views/contact.html';">
+        <h1>Contacto</h1>
+        <span>Tienes alguna pregunta?</span>
+        <i class="fa-regular fa-paper-plane"></i>
+      </button>
+    </div>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

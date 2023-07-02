@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer type="module"></script>
+  <script src="../js/contact.js" defer type="module"></script>
+  <title>EcoVida</title>
+</head>
+
+<body>
+
+  <header class="flex">
+    <div>
+      <a id="nav-home" class="nav-logo" data-role="nav-link" href="../index.html">
+        <img class="logo" src="../assets/images/logo.png" alt="EcoVida">
+      </a>
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false" type="button">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="navigation" class="navigation flex" data-visible="false">
+        <li>
+          <a id="nav-projects" data-role="nav-link" data-status="" href="./projects.html">Proyectos</a>
+        </li>
+        <li>
+          <a id="nav-news" data-role="nav-link" data-status="" href="./news.html">Noticias</a>
+        </li>
+        <li>
+          <a id="nav-about-us" data-role="nav-link" data-status="" href="./about-us.html">Sobre Nosotros</a>
+        </li>
+        <li>
+          <a id="nav-contact" data-role="nav-link" data-status="active" href="./contact.html">Contacto</a>
+        </li>
+        <li>
+          <a id="nav-admin" data-role="nav-link" data-status="" data-visible="false"
+            href="./administration.html">Administración</a>
+        </li>
+        <li id="user-action" class="user-action">
+          <a id="login" href="./login.html">Iniciar Sesión</a>
+          <span id="logged-user" class="invisible"></span>
+          <a id="logout" class="invisible" href="./login.html">Cerrar Sesión</a>
+          <button id="sign-up" onclick="window.location.href = 'sign-up.html';">Incribirse</button>
+        </li>
+      </ul>
+    </nav>
+
+
+    <div></div>
+  </header>
+
+  <main>
+
+    <div class="contact-card">
+      <div class="contact-grid">
+        <div class="contact-banner">
+          <h1>Contactanos</h1>
+          <div class="aditional-contact">
+            <span>Encontranos tambien en:</span>
+            <div class="contact-socials">
+              <div>
+                <i class="fa-brands fa-linkedin"></i>
+                <span>Linkedin</span>
+              </div>
+              <div>
+                <i class="fa-brands fa-twitter"></i>
+                <span>Twitter</span>
+              </div>
+              <div>
+                <i class="fa-brands fa-facebook"></i>
+                <span>Facebook</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form action="">
+          <div class="field">
+            <label for="name">Nombre Completo<span class="black">*</span></label>
+            <input type="text" name="name" id="name">
+            <span id="name-error" class="red invisible"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email<span class="black">*</span></label>
+            <input type="email" name="email" id="email">
+            <span id="email-error" class="red invisible"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Teléfono<span class="black">*</span></label>
+            <input type="text" name="phone" id="phone">
+            <span id="phone-error" class="red invisible"></span>
+          </div>
+          <div class="field">
+            <label for="message">Mensaje<span class="black">*</span></label>
+            <textarea name="message" id="message" cols="20" rows="10"></textarea>
+            <span id="message-error" class="red invisible"></span>
+          </div>
+          <div class="black required-fields">(*) Campos Requeridos</div>
+          <button type="button" id="send-message" class="form-button">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

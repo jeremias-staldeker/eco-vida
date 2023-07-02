@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/tables.css">
+  <script src="../js/main.js" defer type="module"></script>
+  <script src="../js/admin.js" defer type="module"></script>
+  <title>EcoVida</title>
+</head>
+
+<body>
+
+  <header class="flex">
+    <div>
+      <a id="nav-home" class="nav-logo" data-role="nav-link" href="../index.html">
+        <img class="logo" src="../assets/images/logo.png" alt="EcoVida">
+      </a>
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false" type="button">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="navigation" class="navigation flex" data-visible="false">
+        <li>
+          <a id="nav-projects" data-role="nav-link" data-status="" href="./projects.html">Proyectos</a>
+        </li>
+        <li>
+          <a id="nav-news" data-role="nav-link" data-status="" href="./news.html">Noticias</a>
+        </li>
+        <li>
+          <a id="nav-about-us" data-role="nav-link" data-status="" href="./about-us.html">Sobre Nosotros</a>
+        </li>
+        <li>
+          <a id="nav-contact" data-role="nav-link" data-status="" href="./contact.html">Contacto</a>
+        </li>
+        <li>
+          <a id="nav-admin" data-role="nav-link" data-status="active" data-visible="true"
+            href="./administration.html">Administración</a>
+        </li>
+        <li id="user-action" class="user-action">
+          <span id="logged-user" class="invisible"></span>
+          <a id="logout" class="invisible" href="./login.html">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div></div>
+  </header>
+
+  <main>
+
+    <div class="tabs-container">
+      <div class="tabs">
+        <input type="radio" name="tabs" id="tabone" checked="checked">
+        <label for="tabone">Usuarios</label>
+        <div class="tab">
+          <div class="tab-content">
+            <div class="table-search">
+              <input type="search" placeholder="Buscar" id="user-search" name="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hovertable-striped table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Fecha De Creación</th>
+                    <th scope="col">Rol</th>
+                  </tr>
+                </thead>
+                <tbody id="users-tbody">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <input type="radio" name="tabs" id="tabtwo">
+        <label for="tabtwo">Proyectos</label>
+        <div class="tab">
+          <div class="tab-content">
+            <div class="table-search">
+              <input type="search" placeholder="Buscar" id="project-search" name="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover table-striped table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Fecha Inicio</th>
+                    <th scope="col">Fecha Fin</th>
+                  </tr>
+                </thead>
+                <tbody id="projects-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <input type="radio" name="tabs" id="tabthree">
+        <label for="tabthree">Noticias</label>
+        <div class="tab">
+          <div class="tab-content">
+            <div class="table-search">
+              <input type="search" placeholder="Buscar" id="news-search" name="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover table-striped table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Fecha de Publicación</th>
+                    <th scope="col">Autor</th>
+                  </tr>
+                </thead>
+                <tbody id="news-tbody">
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer type="module"></script>
+  <script src="../js/login.js" defer type="module"></script>
+  <title>EcoVida</title>
+</head>
+
+<body>
+
+  <header class="flex">
+    <div>
+      <a id="nav-home" class="nav-logo" data-role="nav-link" href="../index.html">
+        <img class="logo" src="../assets/images/logo.png" alt="EcoVida">
+      </a>
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false" type="button">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="navigation" class="navigation flex" data-visible="false">
+        <li class="user-action user-action-simple">
+          <button onclick="window.location.href = 'sign-up.html';">Incribirse</button>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <div class="login-card">
+      <div class="login-grid">
+        <div class="login-form">
+          <h1>¡Bienvenido!</h1>
+          <form>
+            <span id="user-error" class="red invisible"></span>
+            <div class="field">
+              <label for="email">Email<span class="black">*</span></label>
+              <input type="text" name="email" id="email">
+              <span id="email-error" class="red invisible"></span>
+            </div>
+            <div class="field">
+              <label for="password">Constraseña<span class="black">*</span></label>
+              <input type="password" name="password" id="password">
+              <span id="password-error" class="red invisible"></span>
+            </div>
+            <div class="login-help">
+              <a href="#">Ayuda, no puedo iniciar sesión</a>
+            </div>
+            <button type="button" id="login-button">
+              Iniciar Sesión
+            </button>
+          </form>
+        </div>
+        <div class="login-banner">
+          <div class="app-logo"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

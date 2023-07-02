@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer type="module"></script>
+  <script src="../js/news.js" defer type="module"></script>
+  <title>EcoVida</title>
+</head>
+
+<body>
+  <header class="flex">
+    <div>
+      <a id="nav-home" class="nav-logo" data-role="nav-link" href="../index.html">
+        <img class="logo" src="../assets/images/logo.png" alt="EcoVida">
+      </a>
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false" type="button">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="navigation" class="navigation flex" data-visible="false">
+        <li>
+          <a id="nav-projects" data-role="nav-link" data-status="" href="./projects.html">Proyectos</a>
+        </li>
+        <li>
+          <a id="nav-news" data-role="nav-link" data-status="active" href="./news.html">Noticias</a>
+        </li>
+        <li>
+          <a id="nav-about-us" data-role="nav-link" data-status="" href="./about-us.html">Sobre Nosotros</a>
+        </li>
+        <li>
+          <a id="nav-contact" data-role="nav-link" data-status="" href="./contact.html">Contacto</a>
+        </li>
+        <li>
+          <a id="nav-admin" data-role="nav-link" data-status="" data-visible="false"
+            href="./administration.html">Administración</a>
+        </li>
+        <li id="user-action" class="user-action">
+          <a id="login" href="./login.html">Iniciar Sesión</a>
+          <span id="logged-user" class="invisible"></span>
+          <a id="logout" class="invisible" href="./login.html">Cerrar Sesión</a>
+          <button id="sign-up" onclick="window.location.href = 'sign-up.html';">Incribirse</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="flex flex-column justify-content-center">
+      <div class="table-search news-search">
+        <input type="search" placeholder="Buscar" id="news-search" name="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div id="news-container" class="card-container"></div>
+    </div>
+  </main>
+
+  <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

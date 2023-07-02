@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer type="module"></script>
+  <title>EcoVida</title>
+</head>
+
+<body>
+
+  <header class="flex">
+    <div>
+      <a id="nav-home" class="nav-logo" data-role="nav-link" href="../index.html">
+        <img class="logo" src="../assets/images/logo.png" alt="EcoVida">
+      </a>
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false" type="button">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="navigation" class="navigation flex" data-visible="false">
+        <li>
+          <a id="nav-projects" data-role="nav-link" data-status="" href="./projects.html">Proyectos</a>
+        </li>
+        <li>
+          <a id="nav-news" data-role="nav-link" data-status="" href="./news.html">Noticias</a>
+        </li>
+        <li>
+          <a id="nav-about-us" data-role="nav-link" data-status="active" href="./about-us.html">Sobre Nosotros</a>
+        </li>
+        <li>
+          <a id="nav-contact" data-role="nav-link" data-status="" href="./contact.html">Contacto</a>
+        </li>
+        <li>
+          <a id="nav-admin" data-role="nav-link" data-status="" data-visible="false"
+            href="./administration.html">Administración</a>
+        </li>
+        <li id="user-action" class="user-action">
+          <a id="login" href="./login.html">Iniciar Sesión</a>
+          <span id="logged-user" class="invisible"></span>
+          <a id="logout" class="invisible" href="./login.html">Cerrar Sesión</a>
+          <button id="sign-up" onclick="window.location.href = '/sign-up.html';">Incribirse</button>
+        </li>
+      </ul>
+    </nav>
+
+    <div></div>
+  </header>
+
+  <main>
+
+    <div class="about-us-card">
+      <div class="about-us-grid">
+        <div class="about-us-banner">
+          <h1>
+            Cuidando el planeta,
+            <br>
+            construyendo futuro.
+          </h1>
+        </div>
+        <div class="history">
+          <h2>Nuestra Historia</h2>
+          <p>Hace más de dos décadas, un grupo de visionarios en la ciudad de Olavarría, Argentina, se unieron en busca
+            de un cambio significativo para el medio ambiente y la comunidad local. Inspirados por su amor por la
+            naturaleza, fundaron la organización sin fines de lucro <b>EcoVida</b>.</p>
+          <p><b>EcoVida</b> se dedica a promover la conciencia ambiental y prácticas sostenibles en colaboración con la
+            comunidad local, escuelas, empresas y otras organizaciones.</p>
+          <p>Desarrollan programas educativos y de capacitación para difundir conocimientos sobre prácticas sostenibles
+            y preservación de recursos.</p>
+          <p>Realizan proyectos de conservación y protección de la biodiversidad en colaboración con otras
+            organizaciones y entidades gubernamentales.</p>
+          <p>Generan impacto positivo y duradero al fomentar la participación y el voluntariado en actividades de
+            conservación y cuidado del medio ambiente.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/ad10912972.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
