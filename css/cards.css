@@ -18,6 +18,7 @@
     border-radius: 1em;
     background: #ece9e6;
     background: linear-gradient(to right, #ffffff, #ece9e6);
+    transition: all .3s;
 }
 
 .card .inscription-button {
@@ -86,4 +87,9 @@ button.cancelar-inscripcion-button {
 
 .user-info > small {
     color: #666;
+}
+
+.card:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    scale: 1.02;
 }
