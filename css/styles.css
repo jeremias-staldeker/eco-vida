@@ -230,6 +230,10 @@ nav {
   text-decoration-style: wavy;
 }
 
+.user-action span#logged-user {
+  font-weight: var(--font-weight-normal);
+}
+
 /* Login */
 .login-card {
   padding: 2em 3em 3em 3em;
@@ -722,7 +726,7 @@ input[type="search"] {
   }
 }
 
-@media only screen and (max-width: 1260px) {
+@media only screen and (max-width: 1296px) {
   .navigation {
     position: fixed;
     align-items: inherit;

@@ -10,6 +10,7 @@ const userActionContainer = document.getElementById("user-action");
 const loginAction = document.getElementById("login");
 const logoutAction = document.getElementById("logout");
 const signUpAction = document.getElementById("sign-up");
+const loggedUserInfo = document.getElementById("logged-user");
 
 navLink.forEach(n => {
   n.addEventListener("click", () => {
@@ -80,6 +81,10 @@ function checkLoggedUser() {
     if (signUpAction) signUpAction.classList.add('invisible');
     if (logoutAction) logoutAction.classList.remove('invisible');
     if (userActionContainer) userActionContainer.classList.add('user-action-simple');
+    if (loggedUserInfo) {
+      loggedUserInfo.innerText = user.name;
+      loggedUserInfo.classList.remove('invisible');
+    }
   } else {
     if (loginAction) loginAction.classList.remove('invisible');
     if (signUpAction) signUpAction.classList.remove('invisible');
