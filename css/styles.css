@@ -241,7 +241,8 @@ nav {
 }
 
 .user-action span#logged-user {
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
 }
 
 /* Login */
