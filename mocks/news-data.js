@@ -250,23 +250,5 @@ export const news = [
         "publicationDate": "2023-06-03T12:00:00Z",
         "author": "David Medina",
         "image": "../assets/images/news/noticia28.jpg"
-    },
-    {
-        "id": 29,
-        "title": "Campaña de reducción de plásticos de un solo uso",
-        "description": "La Fundación EcoVida impulsa una campaña de reducción de plásticos de un solo uso para mitigar la contaminación.",
-        "content": "La Fundación EcoVida ha puesto en marcha una campaña de reducción de plásticos de un solo uso, con el objetivo de mitigar la contaminación y promover prácticas más sostenibles. Se realizan acciones de concientización sobre los impactos del plástico en los ecosistemas, se promueve el uso de alternativas reutilizables y se trabajan en alianzas con empresas y gobiernos locales para implementar políticas de reducción de plásticos. La Fundación EcoVida invita a todos a sumarse a esta campaña y adoptar hábitos más responsables con el medio ambiente.",
-        "publicationDate": "2023-06-02T12:00:00Z",
-        "author": "María Gómez",
-        "image": "../assets/images/news/noticia29.jpg"
-    },
-    {
-        "id": 30,
-        "title": "Proyecto de conservación de humedales",
-        "description": "La Fundación EcoVida desarrolla un proyecto de conservación de humedales para proteger su biodiversidad y funciones ecológicas.",
-        "content": "La Fundación EcoVida está desarrollando un proyecto de conservación de humedales, con el objetivo de proteger su biodiversidad y preservar sus funciones ecológicas. Se están llevando a cabo acciones de restauración de humedales degradados, monitoreo de especies acuáticas y promoción de prácticas sostenibles en el uso de recursos hídricos. Además, se busca generar conciencia sobre la importancia de estos ecosistemas y su papel crucial en la regulación del clima y la protección contra inundaciones. La Fundación EcoVida invita a todos a conocer y apoyar este proyecto de conservación de humedales.",
-        "publicationDate": "2023-06-01T12:00:00Z",
-        "author": "Javier López",
-        "image": "../assets/images/news/noticia30.jpg"
     }
 ];
