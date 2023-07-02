@@ -736,6 +736,7 @@ input[type="search"] {
   min-width: 50%;
 }
 
+/* Responsive */
 @media (max-width: 45em) {
   .tabs .tab,
   .tabs label {
@@ -749,7 +750,12 @@ input[type="search"] {
   }
 }
 
-/* Responsive */
+@media screen and (max-width: 1600px) {
+  .home-grid > button > p {
+    max-width: 55%;
+  }
+}
+
 @media screen and (max-width: 1366px) {
   .home-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -769,6 +775,10 @@ input[type="search"] {
   .login-grid,
   .sign-up-grid {
     max-width: 80%;
+  }
+
+  .home-grid > button > p {
+    display: none;
   }
 }
 
