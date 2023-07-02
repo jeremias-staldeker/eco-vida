@@ -405,6 +405,12 @@ nav {
   padding: 0;
   outline: 0;
   color: var(--color-black);
+  transition: all 0.3s;
+}
+
+.home-grid button:hover {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px !important;
+  scale: 1.02;
 }
 
 .home-grid > button > * {
@@ -429,6 +435,17 @@ nav {
   text-transform: uppercase;
 }
 
+.home-grid > button > p {
+  font-stretch: ultra-expanded;
+  font-size: 2em;
+  max-width: 45%;
+  font-weight: var(--font-weight-normal);
+  opacity: 0.8;
+  position: absolute;
+  top: 15%;
+  text-align: left;
+}
+
 .home-grid > button > i {
   top: 0;
   right: 0;
@@ -436,8 +453,7 @@ nav {
 }
 
 button[data-section="projects"] {
-  background-color: var(--color-dark);
-  grid-area: 1 / 1 / 3 / 2;
+  background-color: var(--color-purple);
   color: var(--color-white);
 }
 
@@ -447,8 +463,9 @@ button[data-section="news"] {
 }
 
 button[data-section="about-us"] {
-  background-color: var(--color-purple);
+  background-color: var(--color-dark);
   color: var(--color-white);
+  grid-area: 1 / 1 / 3 / 2;
 }
 
 button[data-section="contacts"] {
