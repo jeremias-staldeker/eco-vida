@@ -176,6 +176,13 @@ nav {
   text-decoration: none;
 }
 
+.navigation a[data-status="active"], .navigation a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.1em;
+}
+
 .navigation a[data-status="active"] {
   text-decoration: underline;
   text-decoration-style: wavy;
