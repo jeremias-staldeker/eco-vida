@@ -9,10 +9,10 @@ Este repositorio contiene el proyecto de Fundacion EcoVida, una institución fic
 
 ## Credenciales por defecto
 
-- Administrador
- email: admin@example.com
- password: admin123
+### Administrador
+- Email: admin@example.com
+- Contraseña: admin123
 
-- Usuario
- email: user@example.com
- password: user123
+### Usuario
+- Email: user@example.com
+- Contraseña: user123
