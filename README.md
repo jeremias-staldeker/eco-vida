@@ -9,8 +9,10 @@ Este repositorio contiene el proyecto de Fundacion EcoVida, una institución fic
 
 ## Credenciales por defecto
 
-- emal: admin@example.com
-- password: admin123
+- Administrador
+ email: admin@example.com
+ password: admin123
 
-- emal: user@example.com
-- password: user123
+- Usuario
+ email: user@example.com
+ password: user123
