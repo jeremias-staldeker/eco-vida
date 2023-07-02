@@ -1,6 +1,6 @@
 import { projects } from '../mocks/projects-data.js'
-import { replaceAll, formatDate, filterObjects } from '../utils/common.js'
-import { isValidDate } from '../utils/validators.js'
+import { replaceAll, formatDate, filterObjects, readJSONFile } from '../utils/common.js'
+import { isEmptyObject, isValidDate } from '../utils/validators.js'
 
 const projectsSearch = document.getElementById('projects-search');
 const cardContainer = document.getElementById('project-container');
@@ -39,8 +39,13 @@ const generateCardElement = (template, data) => {
   inscriptionButton.classList.add('inscription-button');
   inscriptionButton.textContent = 'Inscribirse';
   inscriptionButton.addEventListener('click', (e) => {
-    const cardElement = e.target.closest('.card');
-    cardElement.classList.add('registered');
+    const loggedUser = readJSONFile('logged-user');
+    if(loggedUser && !isEmptyObject(loggedUser)) {
+      const cardElement = e.target.closest('.card');
+      cardElement.classList.add('registered');
+    } else {
+      window.location.href = 'login.html';
+    }
   });
 
   // Crear el botón de cancelar inscripción
