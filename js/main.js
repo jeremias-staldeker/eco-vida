@@ -1,3 +1,5 @@
+import { readJSONFile } from '../utils/common.js';
+
 const mainContent = document.querySelector("main");
 const navLink = document.querySelectorAll('[data-role="nav-link"]');
 const navigation = document.querySelector('.navigation');
@@ -67,7 +69,7 @@ function closeMobileMenu() {
 }
 
 function checkLoggedUser() {
-  const user = JSON.parse(localStorage.getItem('logged-user'));
+  const user = readJSONFile('logged-user');
   if (user) {
     if (user?.role?.name === 'admin') {
       navAdmin?.setAttribute('data-visible', true);

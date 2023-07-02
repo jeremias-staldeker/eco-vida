@@ -250,23 +250,5 @@ export const projects = [
     "startDate": "2024-11-01T09:30:00Z",
     "endDate": "2024-12-31T09:30:00Z",
     "image": "../assets/images/projects/proyecto28.jpg"
-  },
-  {
-    "id": 29,
-    "title": "Proyecto de energías renovables comunitarias",
-    "description": "Fomentando el uso de energías renovables a nivel comunitario.",
-    "content": "El proyecto de energías renovables comunitarias tiene como objetivo fomentar el uso de energías renovables a nivel comunitario. A través de la instalación de sistemas solares y eólicos en espacios públicos y comunidades rurales, la Fundación EcoVida busca promover la generación de energía limpia y la reducción de emisiones de gases de efecto invernadero. Se capacitará a los miembros de las comunidades en el mantenimiento de los sistemas y se trabajará en la sensibilización sobre los beneficios de las energías renovables.",
-    "startDate": "2024-12-01T09:30:00Z",
-    "endDate": "2024-12-31T09:30:00Z",
-    "image": "../assets/images/projects/proyecto29.jpg"
-  },
-  {
-    "id": 30,
-    "title": "Programa de restauración de ecosistemas marinos",
-    "description": "Recuperando la salud de los ecosistemas marinos y protegiendo la vida marina.",
-    "content": "El programa de restauración de ecosistemas marinos tiene como objetivo recuperar la salud de los ecosistemas marinos y proteger la vida marina en nuestra región. A través de la implementación de estrategias de restauración, la protección de áreas marinas clave y la promoción de prácticas pesqueras sostenibles, la Fundación EcoVida busca conservar la biodiversidad marina y garantizar la sostenibilidad de los recursos pesqueros. Se realizarán acciones de limpieza de playas y se fomentará la educación ambiental sobre la importancia de los ecosistemas marinos.",
-    "startDate": "2024-01-01T09:30:00Z",
-    "endDate": "2024-12-31T09:30:00Z",
-    "image": "../assets/images/projects/proyecto30.jpg"
   }
 ];

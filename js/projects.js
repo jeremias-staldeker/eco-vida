@@ -1,6 +1,6 @@
 import { projects } from '../mocks/projects-data.js'
-import { replaceAll, formatDate, filterObjects } from '../utils/common.js'
-import { isValidDate } from '../utils/validators.js'
+import { replaceAll, formatDate, filterObjects, readJSONFile } from '../utils/common.js'
+import { isEmptyObject, isValidDate } from '../utils/validators.js'
 
 const projectsSearch = document.getElementById('projects-search');
 const cardContainer = document.getElementById('project-container');
@@ -24,25 +24,51 @@ const generateCardElement = (template, data) => {
     cardHTML = replaceAll(cardHTML, placeholder, value);
   }
 
+  // Crear un elemento contenedor temporal para la tarjeta
   const templateElem = document.createElement('div');
   templateElem.innerHTML = cardHTML;
 
+  // Eliminar el div con la clase "user"
   const userDiv = templateElem.querySelector('.user');
   if (userDiv) {
     userDiv.parentElement.removeChild(userDiv);
   }
 
-  const inscriptionButton = document.createElement('div');
-  inscriptionButton.innerHTML = '<button class="inscription-button">Inscribirse</button>';
+  // Crear el botón de inscripción
+  const inscriptionButton = document.createElement('button');
+  inscriptionButton.classList.add('inscription-button');
+  inscriptionButton.textContent = 'Inscribirse';
+  inscriptionButton.addEventListener('click', (e) => {
+    const loggedUser = readJSONFile('logged-user');
+    if(loggedUser && !isEmptyObject(loggedUser)) {
+      const cardElement = e.target.closest('.card');
+      cardElement.classList.add('registered');
+    } else {
+      window.location.href = 'login.html';
+    }
+  });
 
+  // Crear el botón de cancelar inscripción
+  const cancelInscriptionButton = document.createElement('button');
+  cancelInscriptionButton.classList.add('cancelar-inscripcion-button');
+  cancelInscriptionButton.textContent = 'Cancelar Inscripción';
+  cancelInscriptionButton.addEventListener('click', (e) => {
+    const cardElement = e.target.closest('.card');
+    cardElement.classList.remove('registered');
+  });
+
+  // Agregar los botones al footer de la tarjeta
   const cardFooter = templateElem.querySelector('.card-footer');
   if (cardFooter) {
     cardFooter.classList.add('centered');
     cardFooter.appendChild(inscriptionButton);
+    cardFooter.appendChild(cancelInscriptionButton);
   }
 
-  return templateElem.firstElementChild;;
+  // Devolver el primer elemento hijo del contenedor temporal
+  return templateElem.firstElementChild;
 };
+
 
 
 /**
